@@ -1,0 +1,24 @@
+{
+  "name": "myweb",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoshiLi95/myweb.git"
+  },
+  "author": "Moshi Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoshiLi95/myweb/issues"
+  },
+  "homepage": "https://github.com/MoshiLi95/myweb#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
