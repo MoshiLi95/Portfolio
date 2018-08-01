@@ -18,7 +18,3 @@ var server = app.listen(port, function(){
 app.get('/', function(req, res){
     res.render('index');
 });
-
-
-
-//rgb(172, 206, 229)
