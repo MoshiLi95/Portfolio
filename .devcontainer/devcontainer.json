@@ -1,17 +1,14 @@
 {
-    "name": "Portfolio Dev Env",
-    "dockerFile": "Dockerfile",
-    "appPort": [
-        3000
-    ],
-    "settings": {
-        "workbench.colorTheme": "Tomorrow Night Blue",
-        "terminal.integrated.defaultProfile.linux": "zsh"
-    },
-    "extensions": [
-        "streetsidesoftware.code-spell-checker",
-        "formulahendry.auto-rename-tag",
-        "coenraads.bracket-pair-colorizer-2",
-        "esbenp.prettier-vscode"
-    ]
+  "name": "Portfolio Dev Env",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  },
+  "extensions": [
+    "streetsidesoftware.code-spell-checker",
+    "formulahendry.auto-rename-tag",
+    "coenraads.bracket-pair-colorizer-2",
+    "esbenp.prettier-vscode"
+  ]
 }
