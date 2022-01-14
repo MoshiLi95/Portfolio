@@ -1,0 +1,31 @@
+.intro {
+  max-width: 1000px;
+  width: 80%;
+  height: 100vh;
+
+  color: #f8f8f2;
+  background-color: transparent;
+
+  padding: 80px 80px 160px 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  h2 {
+    margin: 20px 0;
+    font-size: clamp(40px, 8vw, 80px);
+    text-align: left;
+  }
+
+  &__first-line {
+    color: #ff5555;
+  }
+
+  &__content {
+    text-align: left;
+    width: 70%;
+  }
+}

@@ -1,24 +1,30 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect, useState } from "react";
+import "./App.scss";
+import Header from "./components/Header";
+import Introduction from "./components/Introduction";
+import Experience from "./components/Experience";
 
-function App() {
+const App = () => {
+  const [loaded, setLoaded] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("UP");
+  const handleScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
+    setScrollDirection(
+      scrollPosition > e.currentTarget.scrollTop ? "UP" : "DOWN"
+    );
+    setScrollPosition(e.currentTarget.scrollTop);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Portfolio init</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header scrollDirection={scrollDirection}></Header>
+
+      <div className="content">
+        <Introduction></Introduction>
+        <Experience></Experience>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

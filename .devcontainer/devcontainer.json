@@ -2,7 +2,7 @@
   "name": "Portfolio Dev Env",
   "dockerFile": "Dockerfile",
   "settings": {
-    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.colorTheme": "Dracula",
     "terminal.integrated.defaultProfile.linux": "zsh"
   },
   "extensions": [

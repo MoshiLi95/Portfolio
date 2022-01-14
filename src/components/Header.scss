@@ -1,0 +1,59 @@
+.header {
+  color: #f8f8f2;
+  background-color: #282a36;
+  padding: 0 80px;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+
+  &__logo {
+    height: 100%;
+    cursor: pointer;
+  }
+  &__nav {
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__link {
+      cursor: pointer;
+      span {
+        color: #ff5555;
+      }
+    }
+    &__link:hover {
+      color: #ff5555;
+    }
+  }
+}
+
+.header--fade-in {
+  animation: fade-in 1s;
+}
+.header--fade-out {
+  animation: fade-out 0.25s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+    display: none;
+  }
+}
