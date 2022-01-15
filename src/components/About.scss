@@ -1,0 +1,28 @@
+.about {
+  margin-bottom: 200px;
+  width: 50%;
+  &__header {
+    position: relative;
+    margin: 0 0 20px 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1 0 1;
+    h2 {
+      color: #f8f8f2;
+      margin: 0 20px 0 20px;
+    }
+    span {
+      color: #ff5555;
+    }
+
+    &__divider {
+      height: 2px;
+      flex-grow: 1;
+      background-color: #ff5555;
+    }
+  }
+}

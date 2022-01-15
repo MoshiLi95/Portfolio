@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.scss";
 import Logo from "../Icon.png";
 
-interface Header {
+interface HeaderProps {
   scrollDirection: string;
 }
 
@@ -22,12 +22,14 @@ const HeaderNavigation = () => {
         <span>{"03. "}</span>Contact
       </span>
 
-      <button className="header_nav_btn">Resume</button>
+      <a href="/resume.pdf" target="_blank">
+        <button className="header_nav_btn">Resume</button>
+      </a>
     </div>
   );
 };
 
-const Header = ({ scrollDirection }: Header) => {
+const Header = ({ scrollDirection }: HeaderProps) => {
   return (
     <div
       className={`header header--${
