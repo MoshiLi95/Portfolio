@@ -10,16 +10,25 @@ const HeaderNavigation = () => {
   return (
     <div className="header__nav">
       <span className="header__nav__link">
-        <span>{"00. "}</span>About Me
+        <a href="#about">
+          <span>{"00. "}</span>About Me
+        </a>
+      </span>
+
+      <span className="header__nav__link">
+        <a href="#experience">
+          <span>{"01. "}</span>Experience
+        </a>
       </span>
       <span className="header__nav__link">
-        <span>{"01. "}</span>Experience
+        <a href="#skill">
+          <span>{"02. "}</span>Skills
+        </a>
       </span>
       <span className="header__nav__link">
-        <span>{"02. "}</span>Skills
-      </span>
-      <span className="header__nav__link">
-        <span>{"03. "}</span>Contact
+        <a href="#contact">
+          <span>{"03. "}</span>Contact
+        </a>
       </span>
 
       <a href="/resume.pdf" target="_blank">

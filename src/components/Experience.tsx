@@ -91,7 +91,7 @@ const ContentItem = ({
 
 const Experience = () => {
   return (
-    <div className="experience">
+    <div className="experience" id="experience">
       <div className="experience__content">
         <h2 className="experience__header">
           <span>01. </span>Experience

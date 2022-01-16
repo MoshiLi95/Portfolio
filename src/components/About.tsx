@@ -13,7 +13,7 @@ const links = {
 const About = () => {
   const iconClick = (link: string) => window.open(link, "_blank");
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about__header">
         <div className="about__header__divider"></div>
         <h2>

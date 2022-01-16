@@ -4,9 +4,9 @@ import "./Contact.scss";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h2>
-        <span>04. </span>Get In Touch
+        <span>03. </span>Get In Touch
       </h2>
       <p>
         Although I’m not currently pursuing my master's, I am looking for
