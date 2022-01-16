@@ -26,9 +26,9 @@
   },
   "scripts": {
     "start": "PORT=3000 react-scripts start",
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='./dist' react-scripts build",
     "test": "react-scripts test",
-    "deploy": "react-scripts build && gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
