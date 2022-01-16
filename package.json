@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://moshili95.github.io/portfolio/",
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
@@ -19,6 +20,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^3.2.3",
     "node-sass": "^7.0.1",
     "typescript": "^4.5.4"
   },
