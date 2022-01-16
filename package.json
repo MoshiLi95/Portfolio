@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://moshili95.github.io/portfolio/",
+  "homepage": "https://moshili95.github.io/portfolio",
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
