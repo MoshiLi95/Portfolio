@@ -8,7 +8,7 @@ const experienceData = [
     role: "Student",
     organization: "Northeastern University",
     link: "https://toronto.northeastern.edu",
-    subtitle: "MS in Informatics | September 2021 - Present | Toronto, Canada",
+    subtitle: "MPS in Informatics | September 2021 - Present | Toronto, Canada",
     contents: [],
   },
   {
@@ -31,7 +31,7 @@ const experienceData = [
     subtitle: "October 2018 - March 2019 | Chesterfield, USA",
     contents: [
       "Maintained company’s existing stock and options web trading tool",
-      "Drove designed and developed company’s new cryptocurrency web trading tool with WebSocket and FIX 4.2 protocol.",
+      "Drove designed and developed company’s new cryptocurrency web trading tool with WebSocket and FIX 4.2 protocol",
     ],
   },
   {
@@ -39,7 +39,7 @@ const experienceData = [
     organization: "Purdue University",
     link: "https://www.cs.purdue.edu/",
     subtitle:
-      "BA in Computer Science | August 2014 - May 2018 | West Lafayette, USA",
+      "BS in Computer Science | August 2014 - May 2018 | West Lafayette, USA",
     contents: [],
   },
 ];

@@ -9,8 +9,7 @@ const Introduction = () => {
       <h2>I like building things, Especially websites.</h2>
       <p className="intro__content">
         I am a Software Programmer with 2 years of professional experience.
-        Currently I am pursuing master of Informatics at Northeastern
-        University.
+        Currently I am pursuing MPS in Informatics at Northeastern University.
       </p>
     </section>
   );

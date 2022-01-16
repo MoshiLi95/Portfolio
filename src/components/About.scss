@@ -25,4 +25,89 @@
       background-color: #ff5555;
     }
   }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+
+    &__text {
+      color: #f8f8f2;
+      text-align: left;
+      p {
+        margin-bottom: 30px;
+        span {
+          cursor: pointer;
+          color: #ff5555;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ff5555;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          &:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    }
+
+    &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .selfie {
+        height: 240px;
+        width: 340px;
+        position: relative;
+
+        &::before {
+          content: ".";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: block;
+
+          background-color: transparent;
+          border: 1px solid #ff5555;
+
+          transform: translate(20px, 20px);
+          transition: 0.3s;
+
+          left: 0;
+          top: 0;
+        }
+
+        img {
+          filter: url("#sea") blur(1px) contrast(0.5) grayscale(0.3);
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover::before {
+          transform: translate(10px, 10px);
+        }
+        &:hover {
+          img {
+            position: relative;
+            filter: inherit;
+            z-index: 20;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,20 @@
+.contact {
+  margin: 200px 0 200px 0;
+  width: 50%;
+  color: #f8f8f2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    margin: 0 20px 0 20px;
+  }
+  span {
+    color: #ff5555;
+  }
+  p {
+    margin: 20px 0 20px 0;
+    width: 50%;
+  }
+}

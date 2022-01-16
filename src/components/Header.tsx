@@ -23,7 +23,7 @@ const HeaderNavigation = () => {
       </span>
 
       <a href="/resume.pdf" target="_blank">
-        <button className="header_nav_btn">Resume</button>
+        <button>Resume</button>
       </a>
     </div>
   );

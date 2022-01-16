@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Introduction from "./components/Introduction";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Skill from "./components/Skill";
+import Contact from "./components/Contact";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
@@ -27,6 +29,8 @@ const App = () => {
         <Introduction></Introduction>
         <About></About>
         <Experience></Experience>
+        <Skill></Skill>
+        <Contact></Contact>
         <Footer></Footer>
       </div>
       <Sidebar></Sidebar>
