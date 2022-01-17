@@ -10,7 +10,8 @@
 /coverage
 
 # production
-
+Dockerfile
+/nginx
 
 # misc
 .DS_Store

@@ -158,7 +158,7 @@ const Skill = () => {
         <div className="skill__header__divider"></div>
       </div>
       <div>
-        <Line options={options} data={data} />;
+        <Line options={options} data={data} />
       </div>
     </div>
   );
