@@ -1,5 +1,11 @@
 .header {
+  @media (max-width: 500px) {
+    display: none;
+  }
   padding: 0 80px;
+  @media (max-width: 500px) {
+    padding: 0 20px;
+  }
   position: fixed;
   top: 0;
   height: 80px;
@@ -20,12 +26,16 @@
     cursor: pointer;
   }
   &__nav {
+    @media (max-width: 800px) {
+      display: none;
+    }
     min-width: 600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     &__link {
       cursor: pointer;
+
       span {
         color: #ff5555;
       }

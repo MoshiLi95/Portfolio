@@ -1,6 +1,13 @@
 .about {
   margin-bottom: 200px;
   width: 50%;
+
+  @media (max-width: 500px) {
+    width: 100%;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
   &__header {
     position: relative;
     margin: 0 0 20px 0;
@@ -73,7 +80,10 @@
         height: 240px;
         width: 340px;
         position: relative;
-
+        @media (max-width: 500px) {
+          height: 210px;
+          width: 300px;
+        }
         &::before {
           content: ".";
           position: absolute;

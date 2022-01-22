@@ -19,6 +19,7 @@ const About = () => {
         <h2>
           <span>00. </span>About
         </h2>
+
         <div className="about__header__divider"></div>
       </div>
       <div className="about__content">
@@ -55,7 +56,7 @@ const About = () => {
         </div>
         <div className="about__content__img">
           <div className="selfie">
-            <img src={Selfie}></img>
+            <img src={Selfie} alt=""></img>
           </div>
         </div>
       </div>

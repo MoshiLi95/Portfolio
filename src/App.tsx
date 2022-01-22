@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.scss";
 
 import Header from "./components/Header";
@@ -8,6 +8,7 @@ import Experience from "./components/Experience";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
 import Sidebar from "./components/Sidebar";
+import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Contact></Contact>
         <Footer></Footer>
       </div>
+      <Menu></Menu>
       <Sidebar></Sidebar>
     </div>
   );
