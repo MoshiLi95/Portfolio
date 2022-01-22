@@ -39,6 +39,9 @@
 }
 
 .menu__btn {
+  @media (min-width: 500px) {
+    display: none;
+  }
   position: fixed;
   right: 5vw;
   top: 5vw;
