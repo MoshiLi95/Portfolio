@@ -49,6 +49,10 @@ button:hover {
   height: 100vh;
   overflow: overlay;
   scroll-behavior: smooth;
+
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
 }
 
 .content {
@@ -58,4 +62,5 @@ button:hover {
   align-items: center;
   width: 100%;
   background-color: #282a36;
+  overflow-x: hidden;
 }

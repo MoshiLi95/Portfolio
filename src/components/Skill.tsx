@@ -24,6 +24,7 @@ ChartJS.register(
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: "top" as const,
@@ -157,7 +158,7 @@ const Skill = () => {
         </h2>
         <div className="skill__header__divider"></div>
       </div>
-      <div>
+      <div className="skill__chart">
         <Line options={options} data={data} />
       </div>
     </div>

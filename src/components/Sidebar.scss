@@ -1,4 +1,9 @@
 .sidebar {
+  @media (max-width: 500px) {
+    display: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
   position: fixed;
   left: 20px;
   bottom: 0px;

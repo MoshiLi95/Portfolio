@@ -1,6 +1,13 @@
 .skill {
   margin-top: 200px;
   width: 50%;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
   &__header {
     position: relative;
     margin: 0 0 20px 0;
@@ -24,5 +31,8 @@
       flex-grow: 1;
       background-color: #ff5555;
     }
+  }
+  &__chart {
+    height: 500px;
   }
 }
