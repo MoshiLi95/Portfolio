@@ -36,8 +36,8 @@ const About = () => {
             projects.
           </p>
           <p>
-            Fast forward to today, I appreciate the fact that I had the
-            opportunity to work as a programmer in both{" "}
+            Fast forward to today, I am grateful that I had the opportunity to
+            work as programmer in both{" "}
             <span onClick={(e) => iconClick(links.sogotrade)}>
               finance industry
             </span>{" "}
