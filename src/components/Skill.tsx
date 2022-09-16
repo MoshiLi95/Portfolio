@@ -128,6 +128,12 @@ const data = {
       backgroundColor: "rgb(189, 147, 249, 0.5)",
     },
     {
+      label: "Web Component",
+      data: [0, 0, 0, 0, 0, 0, 0, 50],
+      borderColor: "rgb(75, 192, 192)",
+      backgroundColor: "rgb(75, 192, 192, 0.5)",
+    },
+    {
       label: "Redux",
       data: [0, 0, 0, 20, 25, 32, 32, 42],
       borderColor: "rgb(255, 85, 85)",

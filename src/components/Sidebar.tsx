@@ -4,7 +4,7 @@ import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
 import "./Sidebar.scss";
 
 const links = {
-  github: "https://github.com/MoshiLi95",
+  github: "https://github.com/Moshi-Li",
   linkedin: "https://www.linkedin.com/in/li-moshi/",
 };
 
