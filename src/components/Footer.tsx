@@ -3,7 +3,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import "./Footer.scss";
 
 const links = {
-  ml: "https://github.com/MoshiLi95/portfolio",
+  ml: "https://github.com/Moshi-Li/portfolio",
   bc: "https://github.com/bchiang7/v4",
 };
 

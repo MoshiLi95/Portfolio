@@ -5,11 +5,22 @@ import "./Experience.scss";
 
 const experienceData = [
   {
-    role: "Student",
-    organization: "Northeastern University",
-    link: "https://toronto.northeastern.edu",
-    subtitle: "MPS in Informatics | September 2021 - Present | Toronto, Canada",
+    role: `Student`,
+    organization: `Northeastern University`,
+    link: `https://toronto.northeastern.edu`,
+    subtitle: `MPS in Informatics | September 2021 - Present | Toronto, Canada`,
     contents: [],
+  },
+  {
+    role: `Software Developer Intern`,
+    organization: `Coveo Solutions Inc.`,
+    link: `https://www.coveo.com/`,
+    subtitle: "July 2022 - Sep 2022| Remote | Montreal, QC, Canada",
+    contents: [
+      `Completed over 20 Jira stories during 3 months internship contributing to company’s open-source project.`,
+      `Added accessibility features and integration tests to reusable components like filters, inputs, and modals.`,
+      `Investigated web accessibility requirements and built prototypes to analyze feasibility.`,
+    ],
   },
   {
     role: "Online Operation Programmer",
@@ -17,11 +28,12 @@ const experienceData = [
     link: "https://www.ubisoft.com/en-us/company/careers/locations/chengdu",
     subtitle: "June 2019 - July 2021 | Chengdu, China",
     contents: [
-      "Collaborated with UX&UI designer and product manager within the team on over 20 new features, assessing designs for technical feasibility",
-      "Built new features and maintained the websites using both ReactJS and Angular utilizing REST APIs provided",
-      "Proposed, drove and implemented migration plan of existing website’s deployment from local servers to Cloud. Upon completion, the new deployment of the website not only fitted the existing feature delivery process smoothly but also reduced the time of the CI/CD process by 80%",
-      "Impacted website performance by migrating the existing website from Angular to ReactJS, aiming to reduce website’s load time. Upon completion, the usability of the website is increased and the load time of the website is reduced by 60%",
-      "Identified innovative ideas; researched potential solutions and built proofs of concepts",
+      `Built and maintained micro frontend, web-based load testing tool using both ReactJS and AngularJS.`,
+      `Reduced website’s loading speed by 60%, participating in website’s migration from AngularJS to ReactJS.`,
+      `Drove and implemented websites’ new CICD pipelines, reducing the time needed for CICD process by 80%.`,
+      `Built and maintained reusable components for the existing components library using ReactJS.`,
+      `Designed and built new API servers for existing solutions using NodeJS, Webpack and ECMAScript 6.`,
+      `Collaborated with UI designer and project manager, accessing designs for technical feasibility.`,
     ],
   },
   {
@@ -30,8 +42,8 @@ const experienceData = [
     link: "https://www.sogotrade.com/",
     subtitle: "October 2018 - March 2019 | Chesterfield, USA",
     contents: [
-      "Maintained company’s existing stock and options web trading tool",
-      "Drove designed and developed company’s new cryptocurrency web trading tool with WebSocket and FIX 4.2 protocol",
+      `Built and maintained company’s we stock trading tool with JavaScript, CSS, HTML.`,
+      `Built new features for company’s existing crypto web trading tool using WebSocket, Protocol Buffer and FIX 4.2.`,
     ],
   },
   {
