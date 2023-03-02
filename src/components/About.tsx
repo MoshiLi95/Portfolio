@@ -49,7 +49,7 @@ const About = () => {
           </p>
           <p>
             I started to ride snowboard a few years ago and I have been playing
-            soccer on weekly basis since high school. You are welcome to check
+            soccer on a weekly basis since high school. You are welcome to check
             out our team’s match highlights{" "}
             <span onClick={(e) => iconClick(links.soccer)}>here</span>
           </p>

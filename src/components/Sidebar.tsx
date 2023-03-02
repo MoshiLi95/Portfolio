@@ -5,7 +5,7 @@ import "./Sidebar.scss";
 
 const links = {
   github: "https://github.com/Moshi-Li",
-  linkedin: "https://www.linkedin.com/in/li-moshi/",
+  linkedin: "https://www.linkedin.com/in/moshi-li/",
 };
 
 const Sidebar = () => {
