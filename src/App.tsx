@@ -1,41 +1,33 @@
-import React, { useState } from "react";
-import "./App.scss";
-
+import { useState, useRef, useEffect } from "react";
+import Earth from "./earth";
 import Header from "./components/Header";
-import Introduction from "./components/Introduction";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Skill from "./components/Skill";
-import Contact from "./components/Contact";
-import Sidebar from "./components/Sidebar";
-import Menu from "./components/Menu";
-import Footer from "./components/Footer";
 
-const App = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState("UP");
-  const handleScroll = (e: React.UIEvent<HTMLDivElement, UIEvent>) => {
-    setScrollDirection(
-      scrollPosition > e.currentTarget.scrollTop ? "UP" : "DOWN"
-    );
-    setScrollPosition(e.currentTarget.scrollTop);
-  };
+import "./App.css";
+
+function App() {
+  const canvasPointer = useRef<null | HTMLDivElement>(null);
+  const [canvasControl, setCanvasControl] = useState<null | Earth>(null);
+
+  useEffect(() => {
+    if (!canvasPointer.current || canvasControl !== null) return;
+    const earth = new Earth(canvasPointer.current);
+
+    setCanvasControl(earth);
+  }, [canvasControl]);
 
   return (
-    <div className="app" onScroll={handleScroll}>
-      <Header scrollDirection={scrollDirection}></Header>
-      <div className="content">
-        <Introduction></Introduction>
-        <About></About>
-        <Experience></Experience>
-        <Skill></Skill>
-        <Contact></Contact>
-        <Footer></Footer>
+    <>
+      <div
+        ref={canvasPointer}
+        className="three--container"
+        id="scene-container"
+      ></div>
+
+      <div className="portfolio">
+        <Header />
       </div>
-      <Menu></Menu>
-      <Sidebar></Sidebar>
-    </div>
+    </>
   );
-};
+}
 
 export default App;
