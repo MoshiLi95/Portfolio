@@ -70,4 +70,8 @@ export default class Earth {
     this.components?.update();
     //this.debugger.update();
   }
+
+  setKeyMap(key: string, value: boolean) {
+    this.components!.keyMap[key] = value;
+  }
 }

@@ -174,7 +174,6 @@ export default class Components {
     });
     document.addEventListener("keyup", (e) => {
       this.keyMap[e.code] = e.type === "keydown";
-      this.airplane.setRotateFlag(undefined);
     });
   }
 
@@ -205,6 +204,7 @@ export default class Components {
       this.testCubeBody.velocity.copy(this.walkVelocityAndDir);
     }
 
+    this.airplane.setRotateFlag(undefined);
     // Turning left
     if (this.keyMap["KeyA"] || this.keyMap["ArrowLeft"]) {
       this.playerGroup.rotateOnAxis(this.turnAxis, 0.004 * 6);
