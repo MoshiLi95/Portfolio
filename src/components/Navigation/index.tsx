@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./index.scss";
 
-const MenuItem = ["About", "Info", "Experience", "Skills", "Projects"];
+const MenuItem = ["#", "About", "Skills", "Experience", "Projects"];
 
 interface NavigationPropsI {
   open: boolean;
@@ -101,11 +101,17 @@ const Navigation: React.FC<NavigationPropsI> = ({ open, closeFunction }) => {
                 className="menu--list--item"
                 key={index}
                 onClick={() => {
-                  console.log(`Go to ${item} Section`);
+                  document.getElementById(item.toLowerCase())?.scrollIntoView({
+                    behavior: "auto",
+                    block: "center",
+                    inline: "center",
+                  });
+
                   closeFunction();
                 }}
               >
                 <span>{item}</span>
+
                 <p>{index}</p>
               </li>
             );

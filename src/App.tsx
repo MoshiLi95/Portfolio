@@ -3,6 +3,7 @@ import Earth from "./earth";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Navigation from "./components/Navigation";
+import About from "./components/About";
 
 import "./App.css";
 
@@ -15,12 +16,11 @@ function App() {
 
   const pageOnWheel = useCallback(
     (e: React.WheelEvent) => {
-      if (portfolioPointer.current) {
-        if (window.innerWidth < 600) {
-          portfolioPointer.current.scrollTop += e.deltaY;
-        } else {
-          portfolioPointer.current.scrollLeft += e.deltaY / 2;
-        }
+      if (portfolioPointer.current && window.innerWidth > 600) {
+        portfolioPointer.current.scrollTo({
+          left: (portfolioPointer.current.scrollLeft += e.deltaY * 2),
+          behavior: "smooth",
+        });
       }
     },
     [portfolioPointer]
@@ -31,7 +31,6 @@ function App() {
     const earth = new Earth(canvasPointer.current);
     setCanvasControl(earth);
 
-    /*
     document.addEventListener("mousemove", (e: MouseEvent) => {
       if (e.clientX <= window.innerWidth * 0.1) {
         earth.setKeyMap("KeyA", true);
@@ -41,7 +40,7 @@ function App() {
         earth.setKeyMap("KeyA", false);
         earth.setKeyMap("KeyD", false);
       }
-    });*/
+    });
   }, [canvasControl]);
 
   return (
@@ -54,8 +53,8 @@ function App() {
 
       <div
         ref={portfolioPointer}
-        onWheel={(e) => pageOnWheel(e)}
         className="portfolio"
+        onWheel={(e) => pageOnWheel(e)}
       >
         <Navigation
           open={menuOpen}
@@ -65,6 +64,7 @@ function App() {
         ></Navigation>
         <Header toggleMenu={() => setMenuOpen(!menuOpen)} />
         <Landing></Landing>
+        <About></About>
         <section className="content--section">Hello</section>
       </div>
     </>

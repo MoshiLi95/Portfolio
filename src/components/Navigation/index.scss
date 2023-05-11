@@ -19,7 +19,13 @@
     left: 60px;
     border-right: 2px solid #00ff41;
 
-    background-color: blue;
+    background-color: #192539;
+
+    @media (max-width: 600px) {
+      top: 50px;
+      left: 0px;
+      height: calc(100vh - 50px);
+    }
 
     .menu--list {
       width: 100%;

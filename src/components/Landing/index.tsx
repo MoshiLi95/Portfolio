@@ -10,7 +10,7 @@ const Landing = () => {
     let typed: any;
     if (textContainer.current) {
       typed = new Typed(textContainer.current, {
-        strings: ["Front-End Developer", "Software Engin", "Programmer"],
+        strings: ["Front-End Developer", "Software Engineer", "Programmer"],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true,
@@ -23,10 +23,10 @@ const Landing = () => {
   }, [textContainer]);
 
   return (
-    <section className="main--section">
+    <section className="main--section" id="#">
       <div>
         <span>
-          Hello, this is Moshi<br></br>
+          Hello&#128075;, this is Moshi<br></br>
         </span>
         <span>{`I am a `}</span>
         <span ref={textContainer} />
