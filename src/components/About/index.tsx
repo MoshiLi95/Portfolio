@@ -3,8 +3,8 @@ import "./index.scss";
 
 const About: React.FC = () => {
   return (
-    <section className="about" id="about">
-      <div className="about__content">
+    <section className="about--section" id="about">
+      <div className="about--content">
         <span>About</span>
         <p>
           イラストレーター Mika Pikazo
@@ -17,7 +17,7 @@ const About: React.FC = () => {
           それが今回展示会をやりたいと思った経緯です。よろしくお願いします。
         </p>
       </div>
-      <div className="about__img">
+      <div className="about--img">
         <div className="selfie">
           <img src={"/public/selfie.jpeg"} alt="blank"></img>
         </div>

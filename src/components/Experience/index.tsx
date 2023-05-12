@@ -8,7 +8,7 @@ const Experience: React.FC = () => {
   return (
     <>
       {" "}
-      <section className="experience">
+      <section className="experience--section">
         <button onClick={() => setOpen(true)}>Open</button>
       </section>
       <Modal open={open} closeFunction={() => setOpen(false)}>

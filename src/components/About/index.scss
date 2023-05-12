@@ -1,4 +1,4 @@
-.about {
+.about--section {
   width: auto;
 
   color: #00ff41;
@@ -13,7 +13,7 @@
 
   backdrop-filter: blur(10px);
 
-  &__img {
+  .about--img {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@
     }
   }
 
-  &__content {
+  .about--content {
     max-width: 700px;
     min-width: 400px;
     position: relative;
