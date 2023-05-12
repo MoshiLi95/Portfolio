@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
+import Experience from "./components/Experience";
 
 import "./App.css";
 
@@ -65,6 +66,7 @@ function App() {
         <Header toggleMenu={() => setMenuOpen(!menuOpen)} />
         <Landing></Landing>
         <About></About>
+        <Experience></Experience>
         <section className="content--section">Hello</section>
       </div>
     </>

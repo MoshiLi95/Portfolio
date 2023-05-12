@@ -87,7 +87,11 @@ const Navigation: React.FC<NavigationPropsI> = ({ open, closeFunction }) => {
   }, [open]);
 
   return (
-    <nav className="navigation" ref={containerRef}>
+    <nav
+      className="navigation"
+      ref={containerRef}
+      onWheel={(e) => e.stopPropagation()}
+    >
       <div
         ref={backdropRef}
         className="backdrop"

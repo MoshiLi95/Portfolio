@@ -1,0 +1,34 @@
+.modal--container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  z-index: 20;
+
+  .modal--backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+  }
+
+  .modal--dialog {
+    position: relative;
+
+    min-width: 500px;
+    min-height: 500px;
+
+    border: 2px solid #00ff41;
+    background-color: #192539;
+  }
+}
