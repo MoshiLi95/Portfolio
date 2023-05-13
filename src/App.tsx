@@ -4,9 +4,9 @@ import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
-import Experience from "./components/Experience";
+import Works from "./components/Works";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const canvasPointer = useRef<null | HTMLDivElement>(null);
@@ -66,7 +66,7 @@ function App() {
         <Header toggleMenu={() => setMenuOpen(!menuOpen)} />
         <Landing></Landing>
         <About></About>
-        <Experience></Experience>
+        <Works></Works>
         <section className="content--section">Hello</section>
       </div>
     </>

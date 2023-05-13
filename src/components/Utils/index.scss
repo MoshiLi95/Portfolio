@@ -1,3 +1,5 @@
+@use "../../variables.scss" as variables;
+
 .modal--container {
   position: fixed;
   width: 100vw;
@@ -25,10 +27,48 @@
   .modal--dialog {
     position: relative;
 
+    max-width: min(700px, 90vw);
     min-width: 500px;
-    min-height: 500px;
+    min-height: 90vh;
 
-    border: 2px solid #00ff41;
-    background-color: #192539;
+    border: 2px solid variables.$theme-color;
+    background-color: variables.$bg-color;
+
+    .modal--btn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+
+      border: 2px solid variables.$theme-color;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .modal--btn--left {
+        position: absolute;
+
+        width: 100%;
+        height: 2px;
+        background-color: variables.$theme-color;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+      .modal--btn--right {
+        width: 100%;
+        height: 2px;
+        background-color: variables.$theme-color;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+    }
   }
 }

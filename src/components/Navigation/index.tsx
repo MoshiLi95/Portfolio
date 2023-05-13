@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./index.scss";
 
-const MenuItem = ["#", "About", "Skills", "Experience", "Projects"];
+const MenuItem = ["#", "About", "Works", "Skills", "Contact"];
 
 interface NavigationPropsI {
   open: boolean;

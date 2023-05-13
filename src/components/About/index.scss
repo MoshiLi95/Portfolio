@@ -1,7 +1,9 @@
+@use "../../variables.scss" as variables;
+
 .about--section {
   width: auto;
 
-  color: #00ff41;
+  color: variables.$theme-color;
 
   flex-direction: column;
   justify-content: flex-start;
@@ -34,7 +36,7 @@
         display: block;
 
         background-color: transparent;
-        border: 1px solid #00ff41;
+        border: 1px solid variables.$theme-color;
 
         transform: translate(20px, 20px);
         transition: 0.3s;

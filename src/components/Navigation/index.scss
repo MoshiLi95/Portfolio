@@ -1,3 +1,5 @@
+@use "../../variables.scss" as variables;
+
 .navigation {
   display: none;
 
@@ -17,9 +19,9 @@
     max-width: 650px;
 
     left: 60px;
-    border-right: 2px solid #00ff41;
+    border-right: 2px solid variables.$theme-color;
 
-    background-color: #192539;
+    background-color: variables.$bg-color;
 
     @media (max-width: 600px) {
       top: 50px;
@@ -33,10 +35,10 @@
       .menu--list--item {
         width: 100%;
         box-sizing: border-box;
-        color: #00ff41;
+        color: variables.$theme-color;
         cursor: pointer;
 
-        border-bottom: 2px solid #00ff41;
+        border-bottom: 2px solid variables.$theme-color;
         padding: 0px 10px;
 
         display: flex;

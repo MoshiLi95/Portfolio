@@ -1,13 +1,16 @@
+@use "../../variables.scss" as variables;
+
 .header {
   position: fixed;
 
-  background-color: #192539;
+  background-color: variables.$bg-color;
+  background-image: url("/public/matrix-code.gif");
 
   top: 0;
   left: 0;
   width: 60px;
   height: 100%;
-  border-right: 2px solid #00ff41;
+  border-right: 2px solid variables.$theme-color;
 
   display: flex;
   flex-direction: column;
@@ -21,7 +24,7 @@
     display: flex;
     flex-direction: row-reverse;
 
-    border-bottom: 2px solid #00ff41;
+    border-bottom: 2px solid variables.$theme-color;
   }
 
   .header--button {
@@ -30,7 +33,7 @@
 
     border: none;
     cursor: pointer;
-    border-bottom: 2px solid #00ff41;
+    border-bottom: 2px solid variables.$theme-color;
     background-color: transparent;
 
     display: flex;
@@ -41,12 +44,12 @@
     @media (max-width: 600px) {
       width: 50px;
       height: 50px;
-      border-left: 2px solid #00ff41;
+      border-left: 2px solid variables.$theme-color;
       border-bottom: none;
     }
 
     .header--dot {
-      background-color: #00ff41;
+      background-color: variables.$theme-color;
       height: 6px;
       width: 6px;
       border-radius: 50%;
@@ -68,7 +71,7 @@
   }
 
   h1 {
-    color: #00ff41;
+    color: variables.$theme-color;
     height: 100%;
     width: 100%;
     text-align: center;
