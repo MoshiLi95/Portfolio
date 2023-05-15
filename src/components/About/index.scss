@@ -15,6 +15,12 @@
 
   backdrop-filter: blur(10px);
 
+  @media (max-width: 600px) {
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
   .about--img {
     width: 100%;
     display: flex;

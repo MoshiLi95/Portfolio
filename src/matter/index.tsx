@@ -228,7 +228,7 @@ export default class SkillPlayground {
           }
         ),
         Matter.Bodies.rectangle(
-          (this.sizes ? this.sizes.width : window.innerWidth) + wallWidth / 2,
+          (this.sizes ? this.sizes.width : window.innerWidth) + wallWidth,
           0,
           wallWidth,
           2 * (this.sizes ? this.sizes.height : window.innerHeight),

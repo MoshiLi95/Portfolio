@@ -13,6 +13,7 @@ import ImageDocker from "../../assets/docker.svg";
 import ImageMongo from "../../assets/mongodb.svg";
 import ImageAWS from "../../assets/aws.svg";
 import ImageGithub from "../../assets/github.svg";
+import ImageGCP from "../../assets/gcp.svg";
 
 export interface ImageInfoI {
   image: string;
@@ -71,6 +72,10 @@ const itemList: ImageInfoI[] = [
   {
     image: ImageAWS,
     scale: 0.1,
+  },
+  {
+    image: ImageGCP,
+    scale: 0.11,
   },
   {
     image: ImageGithub,

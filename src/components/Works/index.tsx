@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import gsap from "gsap";
+import Slider from "react-slick";
 import { Modal } from "../Utils";
 import {
   experiencesList,
@@ -7,6 +7,9 @@ import {
   ProjectDetailI,
   projectsList,
 } from "./info";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./index.scss";
 
 const dummyWorkDetail = {
@@ -19,7 +22,7 @@ const dummyWorkDetail = {
   bullets: [],
 };
 
-const Experience: React.FC = () => {
+const Works: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [selectedWork, setSelectedWork] = useState<
     ExperienceDetailI | ProjectDetailI
@@ -53,18 +56,52 @@ const Experience: React.FC = () => {
         </div>
         <div>
           <h1>Projects</h1>
-          <ul>
+          <ul className="works--project--table">
             {projectsList.map((item) => {
               return (
                 <li
+                  key={`project-${item.projectName}`}
                   className="works--project--item"
-                  key={item.projectName}
-                  onClick={() => {
-                    setSelectedWork(item);
-                    setOpen(true);
-                  }}
                 >
-                  <h4>{item.projectName}</h4>
+                  <div>
+                    <h4>{item.projectName}</h4>
+                    {item.description.map((description, index) => {
+                      return (
+                        <p key={`project-description-${index}`}>
+                          {description}
+                        </p>
+                      );
+                    })}
+                    {item.images.length > 0 && (
+                      <div className="works--project--carousel">
+                        <Slider dots={true}>
+                          {item.images.map((imagePath, index) => {
+                            return (
+                              <div
+                                className="carousel--item"
+                                key={`project-carousel-${index}`}
+                              >
+                                <img src={imagePath}></img>
+                              </div>
+                            );
+                          })}
+                        </Slider>
+                      </div>
+                    )}
+                    {item.links.length > 0 && (
+                      <div className="works--project--links">
+                        {item.links.map((item, index) => {
+                          return (
+                            <span key={`project-link-${index}`}>
+                              <a href={item.url} target="blank">
+                                {item.name}
+                              </a>
+                            </span>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 </li>
               );
             })}
@@ -82,34 +119,8 @@ const Experience: React.FC = () => {
             <ul>
               {selectedWork.bullets.map((line, index) => {
                 return (
-                  <li key={index}>
+                  <li key={`${selectedWork.companyName}-${index}`}>
                     <span>{line}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
-        {selectedWork.type === 1 && (
-          <div className="project--modal">
-            <div className="project--modal--header">
-              <h3>{selectedWork.projectName}</h3>
-            </div>
-
-            <ul>
-              {selectedWork.bullets.map((line, index) => {
-                return (
-                  <li key={index}>
-                    <span>{line}</span>
-                  </li>
-                );
-              })}
-            </ul>
-            <ul>
-              {selectedWork.links.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <a href={link.url}>{link.name}</a>
                   </li>
                 );
               })}
@@ -121,4 +132,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default Works;

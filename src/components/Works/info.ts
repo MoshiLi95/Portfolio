@@ -1,3 +1,6 @@
+import fairFairytaleLanding from "../../assets/fairfairytale-landing.png";
+import fairFairytaleContent from "../../assets/fairfairytale-content.png";
+import spacestagramLanding from "../../assets/spacestagram-landing.png";
 enum WorksType {
   Job,
   Project,
@@ -17,8 +20,9 @@ export interface ProjectDetailI {
   type: WorksType.Project;
   iconPath: string;
   projectName: string;
-  bullets: string[];
+  description: string[];
   links: LinkDetailI[];
+  images: string[];
 }
 
 interface LinkDetailI {
@@ -63,13 +67,48 @@ const projectsList: ProjectDetailI[] = [
     type: 1,
     iconPath: "",
     projectName: "Fair-Fairytale-UI",
-    bullets: ["A project based on NLP model to "],
+    description: ["A web UI built to display contents"],
     links: [
       {
         url: "https://moshi-li.github.io/fair-fairytale-ui/",
         name: "Live Demo",
       },
+      {
+        url: "https://github.com/Moshi-Li/fair-fairytale-ui",
+        name: "Git Repository",
+      },
     ],
+    images: [fairFairytaleLanding, fairFairytaleContent],
+  },
+  {
+    type: 1,
+    iconPath: "",
+    projectName: "Coveo/ui-kit",
+    description: [
+      "Coveo Solution's open source reusable component library. Home of @coveo/headless, @coveo/atomic.",
+    ],
+    links: [
+      {
+        url: "https://github.com/coveo/ui-kit",
+        name: "Git Repository",
+      },
+    ],
+    images: [],
+  },
+  {
+    type: 1,
+    iconPath: "",
+    projectName: "Spacestagram",
+    description: [
+      "Image browsing web application utilizing NASA public image apis",
+    ],
+    links: [
+      {
+        url: "https://moshi-li.github.io/spacestagram/",
+        name: "Demo",
+      },
+    ],
+    images: [spacestagramLanding],
   },
 ];
 
