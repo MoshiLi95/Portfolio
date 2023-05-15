@@ -8,6 +8,11 @@
   flex-direction: row;
   column-gap: 100px;
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
   color: variables.$theme-color;
 
   padding: 20px;
