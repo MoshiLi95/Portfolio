@@ -112,6 +112,7 @@ export default class Components {
     this.cannonDebugger = new CannonDebugger(this.scene, this.physicsWorld, {
       onInit(body, mesh) {
         mesh.visible = false;
+        body;
         document.addEventListener("keydown", (event) => {
           if (event.key === "k") {
             mesh.visible = !mesh.visible;

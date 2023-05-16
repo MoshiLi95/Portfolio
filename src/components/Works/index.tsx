@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { Modal } from "../Utils";
 import {

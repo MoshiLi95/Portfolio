@@ -76,7 +76,7 @@ const Modal: React.FC<ModalPropsI> = ({ open, closeFunction, children }) => {
     >
       <div className="modal--backdrop" onClick={() => closeFunction()}></div>
       <dialog ref={modalRef} className="modal--dialog" open={open}>
-        <div className="modal--btn" onClick={(e) => closeFunction()}>
+        <div className="modal--btn" onClick={() => closeFunction()}>
           <div className="modal--btn--left"></div>
           <div className="modal--btn--right"></div>
         </div>

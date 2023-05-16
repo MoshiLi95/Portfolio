@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 //@ts-expect-error accept
 import Typed from "typed.js";
 import "./index.scss";
