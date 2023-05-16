@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation";
 import About from "./components/About";
 import Works from "./components/Works";
 import Skill from "./components/Skill";
-
+import Contact from "./components/Contact";
 import "./App.scss";
 
 function App() {
@@ -69,6 +69,7 @@ function App() {
         <About></About>
         <Skill></Skill>
         <Works></Works>
+        <Contact></Contact>
       </div>
     </>
   );
