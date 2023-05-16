@@ -67,7 +67,7 @@ const projectsList: ProjectDetailI[] = [
     type: 1,
     iconPath: "",
     projectName: "Fair-Fairytale-UI",
-    description: ["A web UI built to display contents"],
+    description: ["A web UI built to display analyzed data from NLP models."],
     links: [
       {
         url: "https://moshi-li.github.io/fair-fairytale-ui/",
@@ -100,7 +100,7 @@ const projectsList: ProjectDetailI[] = [
     iconPath: "",
     projectName: "Spacestagram",
     description: [
-      "Image browsing web application utilizing NASA public image apis",
+      "Image browsing web application utilizing NASA public image apis.",
     ],
     links: [
       {
