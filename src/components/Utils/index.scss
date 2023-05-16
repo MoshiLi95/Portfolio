@@ -28,7 +28,7 @@
     position: relative;
 
     max-width: min(700px, 90vw);
-    min-width: 500px;
+    min-width: min(500px, 90vw);
     min-height: 90vh;
 
     border: 2px solid variables.$theme-color;
