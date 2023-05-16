@@ -18,7 +18,7 @@ export default class Planet {
     this.instance = new THREE.Mesh(
       new THREE.SphereGeometry(100, 1000, 1000),
       new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load("public/8k_earth_nightmap.jpg"),
+        map: new THREE.TextureLoader().load("/8k_earth_nightmap.jpg"),
       })
     );
 

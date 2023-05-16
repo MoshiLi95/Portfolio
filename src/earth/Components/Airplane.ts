@@ -50,7 +50,7 @@ export default class Airplane {
 
   loadModel() {
     const loader = new GLTFLoader();
-    loader.load("/public/low-poly-animals.gltf", (gltf: GLTF) => {
+    loader.load("low-poly-animals.gltf", (gltf: GLTF) => {
       this.target = gltf.scene.children[2];
 
       this.target.position.set(0, 0, 0);
