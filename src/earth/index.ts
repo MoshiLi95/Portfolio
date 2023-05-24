@@ -1,8 +1,10 @@
 import * as THREE from "three";
+import { EventEmitter } from "events";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
 import Sizes from "./Utils/Sizes";
 import Time from "./Utils/Time";
+import Resources from "./Utils/Resources";
 import Camera from "./Camera";
 import Renderer from "./Renderer";
 
@@ -13,17 +15,19 @@ declare const window: Window &
     Earth: Earth;
   };
 
-export default class Earth {
+export default class Earth extends EventEmitter {
   container;
   scene;
   sizes;
   time;
+  resources;
   camera;
   renderer;
   controls;
-  components;
+  components: any;
 
   constructor(container?: HTMLDivElement) {
+    super();
     if (!window.Earth && container === undefined)
       throw new Error("No container");
     if (window.Earth) return window.Earth;
@@ -31,6 +35,7 @@ export default class Earth {
 
     this.container = container;
 
+    this.resources = new Resources();
     this.sizes = new Sizes();
     this.time = new Time();
 
@@ -47,7 +52,10 @@ export default class Earth {
       this.renderer.instance.domElement
     );
 
-    this.components = new ModelComponents();
+    this.resources.on("loaded", () => {
+      this.components = new ModelComponents();
+      this.emit("loaded");
+    });
 
     this.sizes.on("resize", () => {
       this.resize();
@@ -66,7 +74,6 @@ export default class Earth {
   update() {
     this.renderer?.update();
     this.controls?.update();
-
     this.components?.update();
     //this.debugger.update();
   }
