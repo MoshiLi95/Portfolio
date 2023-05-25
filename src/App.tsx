@@ -60,18 +60,20 @@ export default function App() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray("section");
+
       gsap.to(panels, {
-        x: -(slider.current!.clientWidth - window.innerWidth),
+        x: -(slider.current!.scrollWidth - 1 * window.innerWidth),
         ease: "none",
         scrollTrigger: {
           trigger: slider.current,
           pin: true,
           scrub: 1,
 
-          end: () => "+=" + slider.current!.offsetWidth,
+          end: () => "+=3500",
         },
       });
     }, component);
+
     return () => ctx.revert();
   });
 

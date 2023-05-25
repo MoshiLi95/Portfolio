@@ -59,7 +59,7 @@ section {
 }
 
 .container {
-  width: 300vw;
+  width: calc(250vw + 1100px);
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
