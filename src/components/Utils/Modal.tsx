@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { useScrollBlock } from "./useScrollBlock";
 
 interface ModalPropsI {
   open: boolean;
@@ -11,6 +12,7 @@ const Modal: React.FC<ModalPropsI> = ({ open, closeFunction, children }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const modalRef = useRef<HTMLDialogElement | null>(null);
   const gsapRef = useRef<gsap.core.Timeline | null>(null);
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   useEffect(() => {
     if (!containerRef.current || !modalRef.current) return;
@@ -62,6 +64,7 @@ const Modal: React.FC<ModalPropsI> = ({ open, closeFunction, children }) => {
           "fade in"
         );
     } else {
+      open ? blockScroll() : allowScroll();
       open ? gsapRef.current.play() : gsapRef.current.reverse();
     }
   }, [open]);

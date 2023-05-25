@@ -10,6 +10,7 @@ import About from "./components/About";
 import Works from "./components/Works";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
+import { useScrollBlock } from "./components/Utils";
 
 import "./App.scss";
 
@@ -17,13 +18,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
   const canvasPointer = useRef<null | HTMLDivElement>(null);
+  const portfolioRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
   const introPointer = useRef<null | HTMLDivElement>(null);
   const [canvasControl, setCanvasControl] = useState<null | Earth>(null);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
-  const component = useRef<HTMLDivElement | null>(null);
-  const slider = useRef<HTMLDivElement | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -38,6 +40,7 @@ export default function App() {
       canvasControl !== null
     )
       return;
+    blockScroll();
     const earth = new Earth(canvasPointer.current);
     earth.on("loaded", () => {
       document.addEventListener("mousemove", (e: MouseEvent) => {
@@ -59,6 +62,7 @@ export default function App() {
         })
         .then(() => {
           if (introPointer.current) introPointer.current.style.display = "none";
+          allowScroll();
         });
     });
     setCanvasControl(earth);
@@ -70,17 +74,17 @@ export default function App() {
       const panels = gsap.utils.toArray("section");
 
       gsap.to(panels, {
-        x: -(slider.current!.scrollWidth - 1 * window.innerWidth),
+        x: -(contentRef.current!.scrollWidth - 1 * window.innerWidth),
         ease: "none",
         scrollTrigger: {
-          trigger: slider.current,
+          trigger: contentRef.current,
           pin: true,
           scrub: 1,
 
           end: () => "+=3500",
         },
       });
-    }, component);
+    }, portfolioRef);
 
     return () => ctx.revert();
   }, [windowWidth]);
@@ -92,7 +96,7 @@ export default function App() {
         className="three--container"
         id="scene-container"
       ></div>
-      <div className="portfolio" ref={component}>
+      <div className="portfolio" ref={portfolioRef}>
         <Navigation
           open={menuOpen}
           closeFunction={() => {
@@ -100,7 +104,7 @@ export default function App() {
           }}
         ></Navigation>
         <Header toggleMenu={() => setMenuOpen(!menuOpen)} />
-        <div ref={slider} className="container">
+        <div ref={contentRef} className="container">
           <Landing></Landing>
           <About></About>
           <Skill></Skill>
