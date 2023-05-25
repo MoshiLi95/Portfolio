@@ -10,17 +10,11 @@
 
 .portfolio {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.2);
-  overflow: scroll;
 
-  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
 
   @media (max-width: 600px) {
     flex-wrap: wrap;
-    overflow-x: hidden;
   }
 
   &::-webkit-scrollbar {
@@ -62,4 +56,27 @@ section {
   top: 0;
   z-index: 9999;
   background-color: variables.$theme-color;
+}
+
+.container {
+  width: 300vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.red {
+  background-color: transparent;
+}
+.red {
+  background: red;
+}
+.orange {
+  background: orange;
+}
+.purple {
+  background: purple;
+}
+.blue {
+  background-color: blue;
 }

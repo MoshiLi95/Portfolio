@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import { useLayoutEffect, useRef, useEffect, useState } from "react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Earth from "./earth";
 import Header from "./components/Header";
@@ -9,27 +10,19 @@ import About from "./components/About";
 import Works from "./components/Works";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
+
 import "./App.scss";
 
-function App() {
+gsap.registerPlugin(ScrollTrigger);
+
+export default function App() {
   const canvasPointer = useRef<null | HTMLDivElement>(null);
-  const portfolioPointer = useRef<null | HTMLDivElement>(null);
   const introPointer = useRef<null | HTMLDivElement>(null);
   const [canvasControl, setCanvasControl] = useState<null | Earth>(null);
 
+  const component = useRef<HTMLDivElement | null>(null);
+  const slider = useRef<HTMLDivElement | null>(null);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  const pageOnWheel = useCallback(
-    (e: React.WheelEvent) => {
-      if (portfolioPointer.current && window.innerWidth > 600) {
-        portfolioPointer.current.scrollTo({
-          left: (portfolioPointer.current.scrollLeft += e.deltaY * 2),
-          behavior: "smooth",
-        });
-      }
-    },
-    [portfolioPointer]
-  );
 
   useEffect(() => {
     if (
@@ -64,6 +57,24 @@ function App() {
     setCanvasControl(earth);
   }, [canvasControl]);
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const panels = gsap.utils.toArray("section");
+      gsap.to(panels, {
+        x: -(slider.current!.clientWidth - window.innerWidth),
+        ease: "none",
+        scrollTrigger: {
+          trigger: slider.current,
+          pin: true,
+          scrub: 1,
+
+          end: () => "+=" + slider.current!.offsetWidth,
+        },
+      });
+    }, component);
+    return () => ctx.revert();
+  });
+
   return (
     <>
       <div
@@ -71,12 +82,7 @@ function App() {
         className="three--container"
         id="scene-container"
       ></div>
-
-      <div
-        ref={portfolioPointer}
-        className="portfolio"
-        onWheel={(e) => pageOnWheel(e)}
-      >
+      <div className="portfolio" ref={component}>
         <Navigation
           open={menuOpen}
           closeFunction={() => {
@@ -84,15 +90,15 @@ function App() {
           }}
         ></Navigation>
         <Header toggleMenu={() => setMenuOpen(!menuOpen)} />
-        <Landing></Landing>
-        <About></About>
-        <Skill></Skill>
-        <Works></Works>
-        <Contact></Contact>
+        <div ref={slider} className="container">
+          <Landing></Landing>
+          <About></About>
+          <Skill></Skill>
+          <Works></Works>
+          <Contact></Contact>
+        </div>
       </div>
       <div ref={introPointer} className="intro"></div>
     </>
   );
 }
-
-export default App;

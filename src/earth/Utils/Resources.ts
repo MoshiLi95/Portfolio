@@ -1,4 +1,4 @@
-import { GLTF, GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { TextureLoader } from "three";
 import { EventEmitter } from "events";
 

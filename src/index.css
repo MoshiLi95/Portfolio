@@ -9,26 +9,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
 }
-html { height: 100%; overflow:auto; }
 
 
-* {
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+
+}
+body {
+  overflow-y: visible;
+  position: relative;
+  overflow-x: hidden;
+}
+html,
+body,p,h1,ul,li {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-p{
-  margin:0
-}
 
