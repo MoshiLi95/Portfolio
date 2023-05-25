@@ -1,15 +1,15 @@
 @use "../../variables.scss" as variables;
 
 .contact--section {
-  width: auto;
+  width: 500px;
   position: relative;
 
-  min-width: min(500px, 100vw);
   padding: 20px;
 
   color: variables.$theme-color;
 
   @media (max-width: 600px) {
+    width: 100vw;
     height: 50vh;
   }
   .contact--content {
