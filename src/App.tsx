@@ -19,10 +19,17 @@ export default function App() {
   const canvasPointer = useRef<null | HTMLDivElement>(null);
   const introPointer = useRef<null | HTMLDivElement>(null);
   const [canvasControl, setCanvasControl] = useState<null | Earth>(null);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
 
   const component = useRef<HTMLDivElement | null>(null);
   const slider = useRef<HTMLDivElement | null>(null);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowWidth(window.innerWidth);
+    });
+  }, []);
 
   useEffect(() => {
     if (
@@ -58,6 +65,7 @@ export default function App() {
   }, [canvasControl]);
 
   useLayoutEffect(() => {
+    if (windowWidth <= 600) return;
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray("section");
 
@@ -75,7 +83,7 @@ export default function App() {
     }, component);
 
     return () => ctx.revert();
-  });
+  }, [windowWidth]);
 
   return (
     <>

@@ -19,7 +19,9 @@ html {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
-
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 body {
   overflow-y: visible;

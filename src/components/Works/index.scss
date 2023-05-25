@@ -1,7 +1,7 @@
 @use "../../variables.scss" as variables;
 
 .works--section {
-  width: 100vw;
+  width: max(100vw, 1500px);
   height: auto;
 
   display: flex;

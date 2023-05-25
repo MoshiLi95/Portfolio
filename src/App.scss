@@ -59,10 +59,15 @@ section {
 }
 
 .container {
-  width: calc(250vw + 1100px);
+  width: calc(100vw + max(50vw, 500px) + 600px + max(100vw, 1500px) + 500px);
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 .red {

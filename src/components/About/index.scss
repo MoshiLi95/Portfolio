@@ -1,7 +1,7 @@
 @use "../../variables.scss" as variables;
 
 .about--section {
-  width: auto;
+  width: max(50vw, 500px);
 
   color: variables.$theme-color;
 
@@ -14,7 +14,6 @@
   row-gap: 20px;
 
   backdrop-filter: blur(10px);
-  width: 50vw;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -72,8 +71,7 @@
   }
 
   .about--content {
-    max-width: 700px;
-    min-width: 400px;
+    width: 100%;
     position: relative;
     @media (max-width: 600px) {
       max-width: 90vw;
