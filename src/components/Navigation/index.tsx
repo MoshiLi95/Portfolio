@@ -102,21 +102,25 @@ const Navigation: React.FC<NavigationPropsI> = ({ open, closeFunction }) => {
           {MenuItem.map((item: string, index: number) => {
             return (
               <li
-                className="menu--list--item"
                 key={index}
                 onClick={() => {
+                  /*
                   document.getElementById(item.toLowerCase())?.scrollIntoView({
                     behavior: "auto",
                     block: "center",
                     inline: "center",
-                  });
+                  });*/
 
                   closeFunction();
                 }}
               >
-                <span>{item}</span>
-
-                <p>{index}</p>
+                <a
+                  href={`#${item.toLocaleLowerCase()}`}
+                  className="menu--list--item anchor"
+                >
+                  <span>{item}</span>
+                  <p>{index}</p>
+                </a>
               </li>
             );
           })}
