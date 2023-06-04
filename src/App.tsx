@@ -21,6 +21,7 @@ export default function App() {
   const portfolioRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
   const introPointer = useRef<null | HTMLDivElement>(null);
+  const scrollerRef = useRef<null | gsap.core.Tween>(null);
   const [canvasControl, setCanvasControl] = useState<null | Earth>(null);
 
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
@@ -73,7 +74,7 @@ export default function App() {
     const ctx = gsap.context(() => {
       const panels = gsap.utils.toArray("section");
 
-      gsap.to(panels, {
+      scrollerRef.current = gsap.to(panels, {
         x: -(contentRef.current!.scrollWidth - 1 * window.innerWidth),
         ease: "none",
         scrollTrigger: {
@@ -81,9 +82,37 @@ export default function App() {
           pin: true,
           scrub: 1,
 
-          end: () => "+=3500",
+          end: () => {
+            console.log("Re cal");
+            return "+=" + innerWidth + "px";
+          },
         },
       });
+
+      const links = document.getElementsByClassName("anchor");
+      for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", () => {
+          console.log("clicked");
+          //console.log(document.getElementById("about")?.scrollLeft);
+          //console.log(document.getElementById("about")?.clientLeft);
+          const target = links[i].getAttribute("href")?.slice(1);
+
+          const el = document.getElementById(target ? target : "");
+          const elC = document.getElementsByClassName("pin-spacer");
+          let left = 0;
+          let total = 0;
+          if (el !== null && el.offsetLeft) {
+            left = el.offsetLeft;
+          }
+          if (elC[0] !== null && elC[0].clientWidth) {
+            total = elC[0].clientWidth - innerWidth;
+          }
+
+          scrollerRef.current?.scrollTrigger?.scroll(
+            ((left - 75) / total) * innerWidth
+          );
+        });
+      }
     }, portfolioRef);
 
     return () => ctx.revert();
