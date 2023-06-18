@@ -6,7 +6,7 @@
 
   display: flex;
   flex-direction: row;
-  column-gap: 100px;
+  column-gap: 50px;
 
   @media (max-width: 600px) {
     width: 100vw;
@@ -19,6 +19,10 @@
   padding: 20px;
 
   backdrop-filter: blur(10px);
+
+  h4 {
+    margin-bottom: 5px;
+  }
 
   .works--experience--item {
     list-style-type: none;
