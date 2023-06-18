@@ -39,10 +39,8 @@ const experiencesList: ExperienceDetailI[] = [
     location: "Montreal, QC, Canada",
     duration: "2022.07 - 2022.09",
     bullets: [
-      "Contributed to open source project Coveo ui-kit with front end technology Web Components during 3months internship.",
-      "Researched requirements for accessibility features and built prototypes using JavaScript and WebComponents to analyze feasibility.",
-      "Added accessibility features to over 10 reusable components ranging from filters, inputs, to drop-down menus and modals.",
-      "Designed and developed integration tests for reusable components using Cypress testing framework.",
+      "Conducted research on WCAG accessibility guidelines and developed prototypes to analyze integration feasibility.",
+      "Integrated accessibility features and corresponding test cases into company’s open-source reusable component library Coveo/ui-kit, using Web Components and Cypress.",
     ],
   },
   {
@@ -53,11 +51,13 @@ const experiencesList: ExperienceDetailI[] = [
     location: "Chengdu, China",
     duration: "2019.06 - 2021.07",
     bullets: [
-      "Built and maintained micro front-end, web-based load testing tool using both React and AngularJS.",
-      "Reduced website’s loading speed by 60% by migrating the website from AngularJS to React.",
-      "Drove and implemented websites’ new CICD pipelines, reducing the time needed for CICD process by 80%.",
-      "Built and maintained reusable components for the existing components library using React.",
-      "Designed and built new API servers for existing solutions using Node.js, Webpack and ECMAScript 6.",
+      "Built and maintained a micro front-end load testing tool that supported over 25 internal projects using React and AngularJS.",
+      "Developed custom dashboards and implemented a comparison mode for the load testing tool's custom Grafana integration.",
+      "Reduced testing hours for the game QA team by developing tools that facilitated their daily operations.",
+      "Designed and built new API services using Node.js, Koa, and MongoDB to support the load testing tool.",
+      "Led the design and implementation of new CI/CD practices, resulting in improved cross-team code deployment with an average deployment time of 30 minutes, resolving runner race conditions and inter-pipeline delays.",
+      "Reduced website’s average loading time by 60%  and enhanced its maintainability, driving and participating in the migration of the load testing tool from AngularJS to React.",
+      "Reduced monetary and management costs by participating in the integration of the load testing tool into the company's standard internal services.",
     ],
   },
 ];
