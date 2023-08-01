@@ -1,6 +1,8 @@
 import fairFairytaleLanding from "../../assets/fairfairytale-landing.png";
 import fairFairytaleContent from "../../assets/fairfairytale-content.png";
 import spacestagramLanding from "../../assets/spacestagram-landing.png";
+import spacestagramExplore from "../../assets/spacestagram-explore.png";
+
 enum WorksType {
   Job,
   Project,
@@ -39,6 +41,7 @@ const experiencesList: ExperienceDetailI[] = [
     location: "Montreal, QC, Canada",
     duration: "2022.07 - 2022.09",
     bullets: [
+      "Participated in the development of Coveo’s SaaS solutions for Salesforce platform.",
       "Conducted research on WCAG accessibility guidelines and developed prototypes to analyze integration feasibility.",
       "Integrated accessibility features and corresponding test cases into company’s open-source reusable component library Coveo/ui-kit, using Web Components and Cypress.",
     ],
@@ -66,19 +69,17 @@ const projectsList: ProjectDetailI[] = [
   {
     type: 1,
     iconPath: "",
-    projectName: "Fair-Fairytale-UI",
-    description: ["A web UI built to display analyzed data from NLP models."],
+    projectName: "Spacestagram",
+    description: [
+      "Image browsing web application utilizing GraphQL and NASA public image apis",
+    ],
     links: [
       {
-        url: "https://moshi-li.github.io/fair-fairytale-ui/",
-        name: "Live Demo",
-      },
-      {
-        url: "https://github.com/Moshi-Li/fair-fairytale-ui",
-        name: "Git Repository",
+        url: "https://moshi-li.github.io/spacestagram/",
+        name: "Demo",
       },
     ],
-    images: [fairFairytaleLanding, fairFairytaleContent],
+    images: [spacestagramLanding, spacestagramExplore],
   },
   {
     type: 1,
@@ -98,17 +99,19 @@ const projectsList: ProjectDetailI[] = [
   {
     type: 1,
     iconPath: "",
-    projectName: "Spacestagram",
-    description: [
-      "Image browsing web application utilizing NASA public image apis.",
-    ],
+    projectName: "Fair-Fairytale-UI",
+    description: ["A web UI built to display analyzed data from NLP models."],
     links: [
       {
-        url: "https://moshi-li.github.io/spacestagram/",
+        url: "https://moshi-li.github.io/fair-fairytale-ui/",
         name: "Demo",
       },
+      {
+        url: "https://github.com/Moshi-Li/fair-fairytale-ui",
+        name: "Git Repository",
+      },
     ],
-    images: [spacestagramLanding],
+    images: [fairFairytaleLanding, fairFairytaleContent],
   },
 ];
 

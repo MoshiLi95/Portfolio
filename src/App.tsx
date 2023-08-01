@@ -67,7 +67,7 @@ export default function App() {
         });
     });
     setCanvasControl(earth);
-  }, [canvasControl]);
+  }, [canvasControl, allowScroll, blockScroll]);
 
   useLayoutEffect(() => {
     if (windowWidth <= 600) return;
@@ -83,7 +83,6 @@ export default function App() {
           scrub: 1,
 
           end: () => {
-            console.log("Re cal");
             return "+=" + innerWidth + "px";
           },
         },
@@ -92,9 +91,6 @@ export default function App() {
       const links = document.getElementsByClassName("anchor");
       for (let i = 0; i < links.length; i++) {
         links[i].addEventListener("click", () => {
-          console.log("clicked");
-          //console.log(document.getElementById("about")?.scrollLeft);
-          //console.log(document.getElementById("about")?.clientLeft);
           const target = links[i].getAttribute("href")?.slice(1);
 
           const el = document.getElementById(target ? target : "");

@@ -12,13 +12,13 @@ const Contact: React.FC = () => {
     <section className="contact--section" id="contact">
       <h1>Contact</h1>
       <div className="contact--content">
-        <a href={"https://www.linkedin.com/in/moshi-li/"} target="blank">
+        <a href={"https://www.linkedin.com/in/moshi-li/"} target="_blank">
           <AiFillLinkedin></AiFillLinkedin>
         </a>
-        <a href={"https://github.com/Moshi-Li"} target="blank">
+        <a href={"https://github.com/Moshi-Li"} target="_blank">
           <AiFillGithub></AiFillGithub>
         </a>
-        <a href={"mailto:li.moshi@outlook.com"} target="blank">
+        <a href={"mailto:li.moshi@outlook.com"} target="_blank">
           <AiFillMail></AiFillMail>
         </a>
       </div>

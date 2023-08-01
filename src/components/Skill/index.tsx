@@ -16,6 +16,7 @@ const Skill: React.FC = () => {
   return (
     <section className="skill--section" id="skill">
       <div ref={containerRef} className="skill--container"></div>
+      <div className="skill--cover"></div>
     </section>
   );
 };
