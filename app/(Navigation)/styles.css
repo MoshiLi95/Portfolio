@@ -1,0 +1,18 @@
+.nav--link {
+  @apply relative font-mono tracking-[1px] hover:font-bold;
+
+  &.selected {
+    @apply font-extrabold;
+    &::after {
+      @apply w-[100%];
+    }
+  }
+
+  &::after {
+    @apply absolute -bottom-[5px] left-0 h-[2px] w-[0%] 
+    rounded-xl bg-black duration-300 content-[''];
+  }
+  &:hover:after {
+    @apply w-[100%];
+  }
+}
