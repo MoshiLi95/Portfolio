@@ -3,13 +3,11 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { clsx } from "clsx";
 
-import "./styles.css";
-
 export default function Links() {
   const pathname = usePathname();
 
   return (
-    <ul className="flex flex-row gap-x-4">
+    <ul className="hidden flex-row gap-x-4 md:flex">
       <li>
         <Link
           href={"/"}
@@ -42,6 +40,20 @@ export default function Links() {
         >
           About
         </Link>
+      </li>
+      <li>
+        <span
+          className="nav--link cursor-pointer"
+          onClick={() => {
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          Contact
+        </span>
       </li>
     </ul>
   );

@@ -6,4 +6,8 @@
 }
 
 body {
+  @apply bg-white dark:bg-zinc-800;
+
+  height: 100vh;
+  overflow: auto;
 }

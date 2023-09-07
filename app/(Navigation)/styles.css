@@ -2,7 +2,7 @@
   @apply relative font-mono tracking-[1px] hover:font-bold;
 
   &.selected {
-    @apply font-extrabold;
+    @apply font-extrabold text-blue-600 dark:text-green-400;
     &::after {
       @apply w-[100%];
     }
@@ -10,7 +10,7 @@
 
   &::after {
     @apply absolute -bottom-[5px] left-0 h-[2px] w-[0%] 
-    rounded-xl bg-black duration-300 content-[''];
+    rounded-xl bg-blue-600 duration-300 content-['']  dark:bg-green-400;
   }
   &:hover:after {
     @apply w-[100%];
