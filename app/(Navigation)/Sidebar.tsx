@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { clsx } from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -59,7 +59,7 @@ export default function Sidebar() {
       </div>
 
       <div
-        className={`duration-800 fixed -right-full bottom-0 flex h-[calc(100%_-_4.5rem)] w-full flex-col items-center justify-center bg-white p-5 transition-transform ease-in-out dark:dark:bg-zinc-800 md:hidden ${clsx(
+        className={`duration-800 fixed -right-full bottom-0 flex h-[calc(100%_-_4.5rem)] w-full flex-col items-center justify-around bg-white p-5 transition-transform ease-in-out dark:dark:bg-zinc-800 md:hidden ${clsx(
           {
             "-translate-x-full": open,
           },

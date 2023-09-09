@@ -16,7 +16,7 @@ export default function IconLinks() {
       </Link>
 
       <Link
-        href={"  https://github.com/Moshi-Li"}
+        href={"https://github.com/Moshi-Li"}
         target="_blank"
         title="Github"
       >
