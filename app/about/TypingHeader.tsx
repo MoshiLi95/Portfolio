@@ -9,6 +9,7 @@ export default function TypingHeader() {
       strings={["$whoami"]}
       typeSpeed={50}
       backSpeed={50}
+      startDelay={500}
       showCursor
       cursorChar="<_"
     ></Typed>
