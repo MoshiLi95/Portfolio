@@ -55,13 +55,15 @@ export function WebComponentIcon() {
 export function IconWrapper({
   children,
   title,
+  className,
 }: {
   children: React.ReactNode;
   title: string;
+  className?: string;
 }) {
   return (
     <span
-      className="flex h-12 w-12  items-center justify-center transition hover:scale-125"
+      className={`${className}  flex h-12 w-12 items-center justify-center transition hover:scale-125`}
       title={title}
     >
       {children}

@@ -9,11 +9,10 @@ iframe {
 
 @media (min-width: 768px) {
   footer {
-    -webkit-clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   }
   iframe {
-    height: 700px;
-
+    height: 600px;
     min-width: 500px;
     width: 60%;
     max-width: 700px;

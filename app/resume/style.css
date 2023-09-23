@@ -1,3 +1,8 @@
+.scroll--progress {
+  @apply fixed left-0 right-0 top-0 z-50 h-1 bg-blue-600 dark:bg-green-400;
+  transform-origin: 0%;
+}
+
 .resume--container {
   @apply relative flex min-h-screen pt-20;
   padding-top: 76px;
@@ -10,8 +15,75 @@ aside {
 }
 
 .list--item {
-  @apply -rotate-90 cursor-pointer font-semibold uppercase tracking-wider text-blue-600 opacity-50 transition duration-500 dark:text-green-400 sm:rotate-0 sm:hover:scale-110;
+  @apply -rotate-90 cursor-pointer font-semibold uppercase tracking-wider text-blue-600 opacity-50 transition duration-500 dark:text-green-400 xl:rotate-0 xl:hover:scale-110;
 }
 .selected {
   @apply scale-110 font-bold opacity-100 sm:scale-125;
+}
+
+.wrapper {
+  @apply w-full bg-white dark:bg-zinc-800;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box {
+  @apply flex aspect-square w-11/12 items-center justify-center px-2 xl:w-1/2 xl:px-12;
+  aspect-ratio: 16 / 14;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.carousel--image {
+  @apply relative  w-full max-w-full;
+  aspect-ratio: 16/9;
+}
+
+.carousel--description {
+  @apply mt-2 grow cursor-auto overflow-auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    @apply bg-white dark:bg-zinc-800;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    @apply bg-blue-500 dark:bg-green-400;
+
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.skill--section--icon {
+  &.dark--mode {
+    @apply dark:!fill-white;
+  }
+}
+
+.education-section--icon svg {
+  @apply stroke-blue-600 dark:stroke-green-400;
+}
+
+.download--btn {
+  @apply mt-5 hidden h-14 w-52 items-center justify-center 
+  rounded border border-blue-500 bg-transparent 
+  px-4 py-2 font-semibold 
+  text-blue-700 hover:border-transparent hover:bg-blue-500 
+  hover:text-white dark:border-green-400 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-white xl:flex;
 }

@@ -15,7 +15,7 @@ import PythonOriginal from "react-devicons/python/original";
 export default function Experience() {
   return (
     <section className="min-h-screen  sm:pt-12" section-name="experience">
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-6xl px-3">
         <h2 className="mb-5 text-4xl font-semibold tracking-wider text-blue-600 dark:text-green-400">
           Experience
         </h2>
@@ -30,7 +30,7 @@ export default function Experience() {
               </span>
             </div>
 
-            <span className="mt-2 font-light uppercase">
+            <span className="mt-5 pr-5 font-light uppercase">
               July 2022 - September 2022
             </span>
           </div>
@@ -99,7 +99,7 @@ export default function Experience() {
                 Ubisoft - Chengdu, Sichuan, China
               </span>
             </div>
-            <span className="mt-2 font-light uppercase">
+            <span className="mt-2 pr-5 font-light uppercase">
               June 2019 - July 2021
             </span>
           </div>

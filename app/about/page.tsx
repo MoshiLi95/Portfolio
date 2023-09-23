@@ -2,6 +2,10 @@ import TypingHeader from "./TypingHeader";
 import Image from "next/image";
 import "./style.css";
 
+export const metadata = {
+  title: "About",
+};
+
 export default function About() {
   return (
     <main className="flex min-h-screen justify-center pl-16 pt-20">

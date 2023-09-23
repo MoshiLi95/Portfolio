@@ -10,24 +10,28 @@ export default function TypingHeader() {
   const [completedCount, setCompletedCount] = useState(0);
 
   return completedCount === LOOP_COUNT ? (
-    <span className="text-5xl font-medium text-blue-600 dark:text-green-500 sm:tracking-widest">
-      Moshi Li
-    </span>
+    <>
+      <span className="text-5xl font-medium text-blue-600 dark:text-green-500 sm:tracking-widest">
+        Moshi Li
+      </span>
+    </>
   ) : (
-    <Typed
-      className={`text-5xl font-medium text-blue-600 dark:text-green-500 sm:tracking-widest`}
-      strings={[
-        `<span class="${maShanZheng.className} text-blue-900 dark:text-green-300">李 墨 石</span>`,
-        "Moshi Li",
-      ]}
-      typeSpeed={50}
-      backSpeed={50}
-      showCursor
-      loop
-      loopCount={LOOP_COUNT}
-      onComplete={() => {
-        setCompletedCount(completedCount + 1);
-      }}
-    ></Typed>
+    <>
+      <Typed
+        className={`text-5xl font-medium text-blue-600 dark:text-green-500 sm:tracking-widest`}
+        strings={[
+          `<span class="${maShanZheng.className} text-blue-900 dark:text-green-300">李 墨 石</span>`,
+          "Moshi Li",
+        ]}
+        typeSpeed={50}
+        backSpeed={50}
+        showCursor
+        loop
+        loopCount={LOOP_COUNT}
+        onComplete={() => {
+          setCompletedCount(completedCount + 1);
+        }}
+      ></Typed>
+    </>
   );
 }

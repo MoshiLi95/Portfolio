@@ -26,7 +26,7 @@ export default function EmailButton() {
         </div>
       </button>
       <div
-        className={`duration-250 flex items-center justify-center opacity-0 transition ease-in-out ${clsx(
+        className={`duration-250 absolute top-full flex translate-y-2 items-center justify-center opacity-0 transition ease-in-out ${clsx(
           { "opacity-100": display },
         )}`}
       >

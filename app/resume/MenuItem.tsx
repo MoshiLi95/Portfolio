@@ -25,7 +25,7 @@ export default function MenuItem() {
   }, [sections]);
 
   return (
-    <ul className="flex h-full w-10 animate-fade-right flex-col justify-around animate-delay-1000 animate-duration-1000 sm:h-auto sm:w-auto sm:items-center sm:justify-center sm:gap-10">
+    <ul className="flex h-full w-10 animate-fade-right flex-col justify-around animate-delay-1000 animate-duration-1000 xl:h-auto xl:w-auto xl:items-center xl:justify-center xl:gap-10">
       {sections.map((section, index) => {
         return (
           <li
