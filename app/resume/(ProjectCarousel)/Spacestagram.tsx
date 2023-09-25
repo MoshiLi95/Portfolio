@@ -4,6 +4,7 @@ import { LuCode2 } from "react-icons/lu";
 import { IconWrapper } from "../../(Utilities)/Icons";
 import TypescriptOriginal from "react-devicons/typescript/original";
 import ReactOriginal from "react-devicons/react/original";
+import DockerOriginal from "react-devicons/docker/original";
 
 export default function Spacestagram() {
   return (
@@ -15,7 +16,7 @@ export default function Spacestagram() {
         <span className="text-2xl font-semibold text-blue-600 dark:text-green-400 md:text-3xl">
           Spacestagram
         </span>
-        <span className="font-light uppercase">Sep 2023</span>
+        <span className="font-light uppercase">June 2023</span>
       </div>
 
       <div className="mt-5 flex flex-row flex-wrap items-center justify-between gap-4 text-xl ">
@@ -38,6 +39,10 @@ export default function Spacestagram() {
               width={50}
               height={50}
             />
+          </IconWrapper>
+
+          <IconWrapper title="Docker">
+            <DockerOriginal size={50} />
           </IconWrapper>
         </div>
 

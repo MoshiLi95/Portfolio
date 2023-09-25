@@ -162,7 +162,10 @@ export default function Experience() {
                 <PythonOriginal size={50} />
               </IconWrapper>
               <IconWrapper title="Express">
-                <ExpressOriginal size={50} />
+                <ExpressOriginal
+                  size={50}
+                  className="skill--section--icon dark--mode"
+                />
               </IconWrapper>
               <IconWrapper title="MongoDB">
                 <MongodbOriginal size={50} />

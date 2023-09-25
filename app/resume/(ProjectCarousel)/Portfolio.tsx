@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-import { LuCode2 } from "react-icons/lu";
 import { IconWrapper } from "../../(Utilities)/Icons";
 import NextjsOriginal from "react-devicons/nextjs/original";
 import TailwindcssPlain from "react-devicons/tailwindcss/plain";
+import DockerOriginal from "react-devicons/docker/original";
 
 import TypescriptOriginal from "react-devicons/typescript/original";
 
@@ -22,7 +21,7 @@ export default function Portfolio() {
 
       <div className="mt-5 flex flex-row flex-wrap items-center justify-between gap-4 text-xl">
         <div className="flex flex-row flex-wrap gap-5 text-xl">
-          <IconWrapper title="Typescript">
+          <IconWrapper title="NextJs">
             <NextjsOriginal
               size={50}
               className="skill--section--icon dark--mode"
@@ -31,22 +30,18 @@ export default function Portfolio() {
           <IconWrapper title="Typescript">
             <TypescriptOriginal size={50} />
           </IconWrapper>
-          <IconWrapper title="Typescript">
+          <IconWrapper title="Tailwind">
             <TailwindcssPlain size={50} />
+          </IconWrapper>
+          <IconWrapper title="Docker">
+            <DockerOriginal size={50} />
           </IconWrapper>
         </div>
 
         <div className="flex flex-row">
-          <Link href={"/"}>
-            <span className="animate-spin text-5xl font-semibold text-blue-600 dark:text-green-400">
-              <LuCode2 />
-            </span>
-          </Link>
-          <Link href={"/resume"} className="ml-2">
-            <button className=" font-base bg-blue-600 px-4 py-2 text-xl text-white transition hover:bg-blue-500 focus:ring dark:bg-green-500 dark:hover:bg-green-400">
-              View Demo
-            </button>
-          </Link>
+          <span className="font-bold text-blue-600 dark:text-green-400">
+            You are here!
+          </span>
         </div>
       </div>
 
