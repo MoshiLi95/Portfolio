@@ -37,7 +37,7 @@ export default function Resume() {
         </div>
       </aside>
 
-      <main className="w-full sm:w-10/12">
+      <main className="w-full overflow-y-hidden sm:w-10/12">
         <Experience />
         <Projects />
         <Education />

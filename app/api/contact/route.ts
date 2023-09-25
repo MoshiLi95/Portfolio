@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "hello@li-moshi.com",
       to: "li.moshi@outlook.com",
-      subject: "Hello World",
+      subject: "Good Job! You you have a message.",
       html: `<p>${name}<br>${email}<br/>Send you a message: <br/> ${message}</p>`,
     });
 

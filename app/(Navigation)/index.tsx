@@ -7,7 +7,7 @@ import "./styles.css";
 
 export default function Navigation() {
   return (
-    <nav className="fixed left-0 top-0 z-10 flex w-full flex-row justify-between bg-white px-10 py-5 transition-shadow hover:shadow-md dark:bg-zinc-800">
+    <nav className="fixed left-0 top-0 z-10 flex w-full flex-row justify-between bg-white px-10 py-5 transition-shadow hover:shadow-md dark:bg-zinc-800 md:px-14">
       <h1 className="text-2xl font-bold uppercase tracking-wider md:text-xl lg:text-2xl lg:tracking-widest ">
         Moshi Li
       </h1>

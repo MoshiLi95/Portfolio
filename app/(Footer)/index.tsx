@@ -8,7 +8,7 @@ import "./styles.css";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex flex-col flex-wrap justify-between bg-blue-700 px-10 pb-10 pt-36 text-xl text-white dark:bg-green-700 md:flex-row">
+      <div className="flex flex-col flex-wrap justify-between bg-blue-700 px-10 pb-10 pt-36 text-xl text-white dark:bg-green-700 md:flex-row md:px-14">
         <div className="w-full  md:w-6/12">
           <h2 className="mb-6 text-5xl font-bold">Contact</h2>
           <div className="mb-4 flex flex-row items-center gap-2">

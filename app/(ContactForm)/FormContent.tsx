@@ -20,6 +20,7 @@ export default function FormContent() {
           ...values,
         });
         setMessageFormState("success");
+        formik.resetForm();
         setTimeout(() => setMessageFormState("init"), 5000);
       } catch (e) {
         setMessageFormState("fail");

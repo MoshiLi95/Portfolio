@@ -1,5 +1,72 @@
+import Image from "next/image";
+import Link from "next/link";
+import { LuCode2 } from "react-icons/lu";
+import { IconWrapper } from "../../(Utilities)/Icons";
+import ReactOriginal from "react-devicons/react/original";
+import TypescriptOriginal from "react-devicons/typescript/original";
+
 export default function FairFairy() {
   return (
-    <div className="h-full w-full border-2 border-blue-600 text-white dark:border-green-400"></div>
+    <div className="flex h-full w-full flex-col border-2 border-blue-600 p-2 px-3 dark:border-green-400">
+      <div className="carousel--image ">
+        <Image src="/asset/NECE.png" alt="portfolio" fill></Image>
+      </div>
+
+      <div className="mt-5 flex flex-row flex-wrap items-center justify-between text-xl">
+        <span className="hidden text-2xl font-semibold text-blue-600 dark:text-green-400 sm:block  md:text-3xl">
+          Narrative Event Chain Extraction Toolkit
+        </span>
+        <span className="text-2xl font-semibold text-blue-600 dark:text-green-400  sm:hidden md:text-3xl">
+          NECE
+        </span>
+        <span className="font-light uppercase">Sep 2022</span>
+      </div>
+
+      <div className="mt-5 flex flex-row flex-wrap items-center justify-between gap-4 text-xl">
+        <div className="flex flex-row flex-wrap gap-5 text-xl">
+          <IconWrapper title="React">
+            <ReactOriginal
+              size={50}
+              className="skill--section--icon dark--mode"
+            />
+          </IconWrapper>
+
+          <IconWrapper title="Typescript">
+            <TypescriptOriginal size={50} />
+          </IconWrapper>
+        </div>
+
+        <div className="flex flex-row">
+          <Link
+            href={"https://github.com/Moshi-Li/fair-fairytale-ui"}
+            target="_blank"
+          >
+            <span className="animate-spin text-5xl font-semibold text-blue-600 dark:text-green-400">
+              <LuCode2 />
+            </span>
+          </Link>
+          <Link
+            href={"https://moshi-li.github.io/fair-fairytale-ui"}
+            target="_blank"
+            className="ml-2"
+          >
+            <button className=" font-base bg-blue-600 px-4 py-2 text-xl text-white transition hover:bg-blue-500 focus:ring dark:bg-green-500 dark:hover:bg-green-400">
+              View Demo
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      <div className="carousel--description mt-5">
+        <p className="text-2xl">
+          {`Dive into the world of narrative analysis with the 
+          NECE - the Narrative Event Chain Extraction Tool. NECE 
+          meticulously pinpoints both subjects and direct objects 
+          within a given text. By presenting its findings in a clear, 
+          user-friendly interface, the website transforms complex narrative 
+          structures into comprehensible insights.`}
+        </p>
+      </div>
+    </div>
   );
 }

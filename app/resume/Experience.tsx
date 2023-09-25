@@ -40,11 +40,11 @@ export default function Experience() {
             <div className="w-full ">
               <h3 className="mb-2 text-xl font-medium">Description:</h3>
               <p>
-                {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many`}
+                {`In a collaborative team of developers, we delved into the WCAG accessibility guidelines. 
+                After building prototypes to evaluate integration viability, we subsequently incorporated 
+                accessibility features into Lightning Web Components, which are then made available to 
+                customers via Salesforce. 
+                `}
               </p>
             </div>
 
@@ -54,13 +54,12 @@ export default function Experience() {
               </h3>
               <ul className="list-inside list-disc">
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is `}
+                  {`Conducted research on WCAG accessibility 
+                  guidelines and developed prototypes to analyze integration feasibility.`}
                 </li>
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.`}
+                  {`Integrated accessibility features and corresponding test cases into company’s open-source 
+                  reusable component library Coveo/ui-kit, using Web Components and Cypress.`}
                 </li>
               </ul>
             </div>
@@ -109,11 +108,10 @@ export default function Experience() {
             <div className="w-full">
               <h3 className="mb-2 text-xl font-medium">Description:</h3>
               <p>
-                {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English. Many`}
+                {`In a team of developers, I continually investigated, developed new features and maintained 
+                a wide range of software projects that support both load testing and end-to-end testing needs of
+                the internal teams. The projects I worked on include micro fronted web applications, 
+                RESTful web APIs and various automation tools.`}
               </p>
             </div>
 
@@ -123,25 +121,25 @@ export default function Experience() {
               </h3>
               <ul className="list-inside list-disc">
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is `}
+                  {`Built and maintained a micro front-end load testing tool that supported 
+                  over 25 internal projects using React and AngularJS. `}
                 </li>
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.`}
+                  {`Led the design and implementation of new CI/CD practices, resulting in improved 
+                  cross-team code deployment with an average deployment time of 30 minutes, 
+                  resolving runner race conditions and inter-pipeline delays.`}
                 </li>
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.`}
+                  {`Developed custom dashboards and implemented a comparison mode for the load 
+                  testing tool's custom Grafana integration.`}
                 </li>
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.`}
+                  {`Designed and built API services using Node.js, Koa, and MongoDB to support the load testing tool.`}
                 </li>
                 <li>
-                  {`It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.`}
+                  {`Reduced website’s average loading time by 60% 
+                  and enhanced its maintainability, driving and participating 
+                  in the migration of the load testing tool from AngularJS to React.`}
                 </li>
               </ul>
             </div>

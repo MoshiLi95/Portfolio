@@ -32,7 +32,7 @@ export const contactEmailTemplate = ({
         <Hr style={global.hr} />
         <Section style={message}>
           <Img
-            src={`https://li-moshi.com/image/favicon.png`}
+            src={`https://li-moshi.com/asset/favicon.png`}
             width="66"
             height="66"
             alt="Li-Moshi.com"

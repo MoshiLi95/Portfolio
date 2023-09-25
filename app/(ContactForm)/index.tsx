@@ -8,16 +8,17 @@ import FormContent from "./FormContent";
 import "./style.css";
 
 const contactForm = {
-  open: {
-    height: "600px",
-    width: "480px",
-    borderRadius: ["50%", "12px"],
-    transition: {
-      type: "spring",
-
-      stiffness: 400,
-      damping: 40,
-    },
+  open: () => {
+    return {
+      height: "600px",
+      width: window.innerWidth < 768 ? "90vw" : "480px",
+      borderRadius: ["50%", "12px"],
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 40,
+      },
+    };
   },
   closed: {
     height: "0",

@@ -25,30 +25,30 @@ export default function About() {
       <div className="flex w-full flex-col justify-center px-5 py-16 md:w-6/12 md:py-0">
         <TypingHeader />
         <div className="mt-10">
-          <div className="float-left mb-12 mr-12 flex  w-full flex-col items-center justify-center md:w-auto">
+          <div className="float-left mb-8 mr-12 flex  w-full flex-col items-center justify-center md:w-auto">
             <Image
               className="max-w-full animate-fade-down rounded-full"
               width={250}
               height={250}
-              src={"/dragonball.png"}
-              alt=""
+              src={"/asset/selfie.png"}
+              alt="selfie"
             />
             <div className="mt-3 flex flex-col items-center justify-center">
               <span className="font-semibold">Moshi Li</span>
-              <span className="italic">Toronto, Canada</span>
             </div>
           </div>
           <p className="text-xl">
-            {`Lorem Ipsum is simply dummy text of the printing and typesetting`}
+            {`Hi there, my name is Moshi and I like to build all kinds of things. 
+            I specialize in front end development and have completed many back end 
+            tasks as well when needed.`}
             <br /> <br />
-            {`Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            PageMaker including versions of Lorem Ipsum`}
+            {`My passion as a front end developer is to bring ideas to reality with 
+            excellent usability, creative aesthetics and a lot of polish – all in 
+            the name of offering fluid and pleasing experiences for users.`}
             <br /> <br />
-            {` Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy text ever since the 1500s, when an unknown printer took a`}
+            {`Software Development is a rapidly growing field and it is challenging to keep up sometimes. 
+            However, with my skills and passion, I am up to the task and excited to see where this life-long 
+            learning journey will take me.`}
           </p>
         </div>
       </div>
