@@ -1,5 +1,5 @@
 .contact--form--container {
-  @apply fixed  bottom-24 right-4  h-16 w-16 bg-transparent;
+  @apply fixed  bottom-4 right-4  h-16 w-16 bg-transparent;
 }
 
 .contact--form {

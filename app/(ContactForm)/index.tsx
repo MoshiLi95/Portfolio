@@ -10,7 +10,7 @@ import "./style.css";
 const contactForm = {
   open: () => {
     return {
-      height: "600px",
+      height: "550px",
       width: window.innerWidth < 768 ? "90vw" : "480px",
       borderRadius: ["50%", "12px"],
       transition: {

@@ -9,7 +9,12 @@ export default function FairFairy() {
   return (
     <div className="flex h-full w-full flex-col border-2 border-blue-600 p-2 px-3 dark:border-green-400">
       <div className="carousel--image ">
-        <Image src="/asset/NECE.png" alt="portfolio" fill></Image>
+        <Image
+          src="/asset/NECE.png"
+          alt="portfolio"
+          objectFit="contain"
+          fill
+        ></Image>
       </div>
 
       <div className="mt-5 flex flex-row flex-wrap items-center justify-between text-xl">

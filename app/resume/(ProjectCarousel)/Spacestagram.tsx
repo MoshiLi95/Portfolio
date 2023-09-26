@@ -10,7 +10,12 @@ export default function Spacestagram() {
   return (
     <div className="flex h-full w-full flex-col border-2 border-blue-600 p-2 px-3 dark:border-green-400">
       <div className="carousel--image">
-        <Image src="/asset/spacestagram.png" alt="spacestagram" fill></Image>
+        <Image
+          src="/asset/spacestagram.png"
+          alt="spacestagram"
+          objectFit="contain"
+          fill
+        ></Image>
       </div>
       <div className="mt-5 flex flex-row flex-wrap items-center justify-between text-xl">
         <span className="text-2xl font-semibold text-blue-600 dark:text-green-400 md:text-3xl">

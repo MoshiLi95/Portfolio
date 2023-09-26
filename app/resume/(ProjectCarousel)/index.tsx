@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import Portfolio from "./Portfolio";
 import Spacestagram from "./Spacestagram";
 import FairFairy from "./FairFairy";
+import MatterJs from "./MatterJs";
 
 gsap.registerPlugin(Draggable);
 
@@ -290,6 +291,9 @@ export default function Test() {
       </div>
       <div className="box">
         <Spacestagram />
+      </div>
+      <div className="box">
+        <MatterJs />
       </div>
       <div className="box">
         <FairFairy />
