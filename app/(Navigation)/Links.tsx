@@ -1,10 +1,12 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import useAnimatedRouter from "../hooks/useAnimatedRouter";
 import { clsx } from "clsx";
 
 export default function Links() {
   const pathname = usePathname();
+  const { animatedRoute } = useAnimatedRouter();
 
   return (
     <ul className="hidden flex-row gap-x-4 md:flex">
@@ -15,6 +17,10 @@ export default function Links() {
             "nav--link": true,
             selected: pathname === "/",
           })}
+          onClick={(e) => {
+            e.preventDefault();
+            animatedRoute("/");
+          }}
         >
           Home
         </Link>
@@ -26,6 +32,10 @@ export default function Links() {
             "nav--link": true,
             selected: pathname === "/resume",
           })}
+          onClick={(e) => {
+            e.preventDefault();
+            animatedRoute("/resume");
+          }}
         >
           Resume
         </Link>
@@ -37,6 +47,10 @@ export default function Links() {
             "nav--link": true,
             selected: pathname === "/about",
           })}
+          onClick={(e) => {
+            e.preventDefault();
+            animatedRoute("/about");
+          }}
         >
           About
         </Link>

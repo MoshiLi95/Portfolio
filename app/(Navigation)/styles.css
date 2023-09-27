@@ -1,5 +1,5 @@
 .nav--link {
-  @apply relative font-mono tracking-[1px] hover:font-bold;
+  @apply relative cursor-pointer font-mono tracking-[1px] hover:font-bold;
 
   &.selected {
     @apply font-extrabold text-blue-600 dark:text-green-400;
