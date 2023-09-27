@@ -1,14 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Providers from "./providers";
-import { Inter } from "next/font/google";
-import Script from "next/script";
+import { Space_Grotesk } from "next/font/google";
 
 import Navigation from "./(Navigation)";
 import Footer from "./(Footer)";
 import ContactForm from "./(ContactForm)";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -28,7 +27,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={spaceGrotesk.className} suppressHydrationWarning>
         <Providers>
           <Navigation />
           <div className="main--content">{children}</div>

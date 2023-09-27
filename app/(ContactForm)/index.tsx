@@ -45,7 +45,7 @@ export default function ContactForm() {
         <>
           {!open && (
             <span
-              className="contact--icon"
+              className="contact--icon animate-bounce"
               onClick={() => {
                 dispatch(toggleContactForm());
               }}
