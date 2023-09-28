@@ -12,7 +12,8 @@ const contactForm = {
     return {
       height: "550px",
       width: window.innerWidth < 768 ? "90vw" : "480px",
-      borderRadius: ["50%", "12px"],
+      borderRadius: ["50%", "0px"],
+      borderWidth: "2px",
       transition: {
         type: "spring",
         stiffness: 400,
@@ -23,7 +24,8 @@ const contactForm = {
   closed: {
     height: "0",
     width: "0",
-    borderRadius: ["12px", "50%"],
+    borderRadius: ["0px", "50%"],
+    borderWidth: "0",
     transition: {
       type: "spring",
       stiffness: 400,

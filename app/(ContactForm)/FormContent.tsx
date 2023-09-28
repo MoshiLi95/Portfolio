@@ -35,7 +35,7 @@ export default function FormContent() {
 
   return (
     <>
-      <h3 className="w-full rounded-t-xl p-4 text-2xl font-semibold  dark:bg-green-500">
+      <h3 className="w-full   border-b-2 border-black  p-4 text-2xl font-semibold dark:border-white">
         Send me a message
       </h3>
       <div className="h-full grow px-5">
@@ -55,7 +55,9 @@ export default function FormContent() {
             )}
             <div className="mt-2">
               <input
-                className="form--input"
+                className={`form--input ${
+                  formik.errors.name ? "form--error" : ""
+                }`}
                 value={formik.values.name}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -77,7 +79,9 @@ export default function FormContent() {
             )}
             <div className="mt-2">
               <input
-                className={"form--input"}
+                className={`form--input ${
+                  formik.errors.name ? "form--error" : ""
+                }`}
                 name="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
@@ -102,7 +106,9 @@ export default function FormContent() {
             </div>
             <div className="mt-2">
               <textarea
-                className="form--input h-36 resize-none dark:text-white"
+                className={`form--input  h-36 resize-none dark:text-white ${
+                  formik.errors.name ? "form--error" : ""
+                }`}
                 value={formik.values.message}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -113,7 +119,12 @@ export default function FormContent() {
           </div>
 
           <div className=" flex flex-row-reverse items-center justify-end gap-3">
-            <label className="block text-sm font-medium leading-6">
+            <label
+              className="block cursor-pointer text-sm font-medium leading-6"
+              onClick={() =>
+                formik.setFieldValue("receipt", !formik.values.receipt)
+              }
+            >
               Email me a copy of this message
             </label>
             <div className="inline-flex items-center">
@@ -167,9 +178,8 @@ export default function FormContent() {
             )}
             <button
               type="submit"
-              className=" disabled:hover: flex h-12 w-full items-center justify-center bg-blue-600 px-4 py-2 text-xl 
-              font-semibold  transition hover:font-medium focus:ring enabled:hover:bg-blue-500 disabled:opacity-50
-              dark:bg-green-500 enabled:dark:hover:bg-green-400"
+              className="btn--secondary flex h-12 w-full cursor-pointer items-center justify-center px-4 
+              py-2  text-xl font-semibold transition disabled:cursor-not-allowed"
               disabled={
                 Object.keys(formik.errors).length > 0 ||
                 messageFormState === "loading"
