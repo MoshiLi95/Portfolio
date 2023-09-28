@@ -18,8 +18,12 @@ const contactFormSlice = createSlice({
     openContactForm: (state) => {
       state.open = true;
     },
+    closeContactForm: (state) => {
+      state.open = false;
+    },
   },
 });
 
-export const { toggleContactForm, openContactForm } = contactFormSlice.actions;
+export const { toggleContactForm, openContactForm, closeContactForm } =
+  contactFormSlice.actions;
 export default contactFormSlice.reducer;

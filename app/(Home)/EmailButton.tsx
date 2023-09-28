@@ -7,18 +7,26 @@ import { useTheme } from "next-themes";
 export default function EmailButton() {
   const [display, setDisplay] = useState(false);
   const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (display) setTimeout(() => setDisplay(false), 5000);
   }, [display]);
 
+  if (!mounted) return <div className="w-[307px]"></div>;
+
   return (
     <div className="relative flex flex-row flex-wrap gap-5">
       <button
-        className="group flex h-12 border-2 border-black bg-transparent focus:ring dark:border-white"
+        className="group flex h-12 border-2 border-black bg-transparent  dark:border-white"
         onClick={() => {
           setDisplay(true);
         }}
+        tabIndex={-1}
       >
         <div className="flex h-full w-12 items-center justify-center bg-black dark:bg-white">
           <LuMailbox

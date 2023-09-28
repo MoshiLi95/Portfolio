@@ -56,7 +56,7 @@ export default function FormContent() {
             <div className="mt-2">
               <input
                 className={`form--input ${
-                  formik.errors.name ? "form--error" : ""
+                  formik.touched.name && formik.errors.name ? "form--error" : ""
                 }`}
                 value={formik.values.name}
                 onChange={formik.handleChange}
@@ -80,7 +80,9 @@ export default function FormContent() {
             <div className="mt-2">
               <input
                 className={`form--input ${
-                  formik.errors.name ? "form--error" : ""
+                  formik.touched.email && formik.errors.email
+                    ? "form--error"
+                    : ""
                 }`}
                 name="email"
                 value={formik.values.email}
@@ -107,7 +109,9 @@ export default function FormContent() {
             <div className="mt-2">
               <textarea
                 className={`form--input  h-36 resize-none dark:text-white ${
-                  formik.errors.name ? "form--error" : ""
+                  formik.touched.message && formik.errors.message
+                    ? "form--error"
+                    : ""
                 }`}
                 value={formik.values.message}
                 onChange={formik.handleChange}
