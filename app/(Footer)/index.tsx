@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="flex flex-col flex-wrap justify-between bg-white px-10 pb-10 pt-36 text-xl  dark:bg-black md:flex-row md:px-14">
         <div className="w-full  md:w-6/12">
           <h2 className="mb-6 text-5xl font-bold">Contact</h2>
-          <div className="mb-4 flex flex-row items-center gap-5">
+          <div className="mb-4 flex flex-row flex-wrap items-center gap-5">
             <Link
               href={"https://github.com/Moshi-Li"}
               target="_blank"

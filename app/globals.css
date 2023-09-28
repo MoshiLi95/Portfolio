@@ -11,3 +11,155 @@ body {
   height: 100vh;
   overflow: auto;
 }
+
+.grecaptcha-badge {
+  width: 70px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  left: 8px !important;
+  bottom: 8px !important;
+}
+.grecaptcha-badge:hover {
+  width: 256px !important;
+}
+
+.main--content {
+  @apply fixed left-0 top-20  h-[calc(100vh-80px)] w-full overflow-auto border-8 border-t-0 border-black bg-white dark:border-white;
+  view-transition-name: main--content;
+}
+
+.main--content::-webkit-scrollbar {
+  display: none;
+}
+
+::view-transition-old(main--content) {
+  animation: move-out 1s ease-in-out 1 forwards;
+}
+
+::view-transition-new(main--content) {
+  animation: move-in 1s ease-in-out 1 forwards;
+}
+
+/* Views Animation */
+
+@keyframes move-in {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-and-scale-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes fade-and-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.btn--primary {
+  @apply relative z-10 border-2 border-black hover:border-0 dark:border-white 
+  dark:before:border-white dark:after:border-white dark:hover:before:border-white 
+  dark:hover:after:border-white;
+  line-height: 40px;
+}
+
+.btn--primary:before,
+.btn--primary:after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  border: 2px solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn--primary:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #000;
+  border-left-color: #000;
+}
+.btn--primary:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #000;
+  border-right-color: #000;
+}
+.btn--primary:hover:before,
+.btn--primary:hover:after {
+  border-color: #000;
+  height: 100%;
+  width: 100%;
+}
+.btn--primary:hover:before {
+  top: 3px;
+  left: 3px;
+}
+.btn--primary:hover:after {
+  bottom: 3px;
+  right: 3px;
+}
+
+/* 13 */
+.btn--secondary {
+  @apply relative border-2 border-black bg-black text-white after:bg-white 
+  hover:text-black  dark:border-white dark:bg-white dark:text-black 
+  dark:after:bg-black dark:hover:text-white;
+  z-index: 1;
+}
+.btn--secondary:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.btn--secondary:hover:after {
+  top: 0;
+  height: 100%;
+}
+.btn--secondary:active {
+  top: 2px;
+}
