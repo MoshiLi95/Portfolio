@@ -8,8 +8,9 @@ import TypescriptOriginal from "react-devicons/typescript/original";
 export default function FairFairy() {
   return (
     <div className="flex h-full w-full flex-col border-2 border-blue-600 p-2 px-3 dark:border-green-400">
-      <div className="carousel--image ">
+      <div className="carousel--image">
         <Image
+          className="transition duration-1000 hover:scale-110"
           src="/asset/NECE.png"
           alt="portfolio"
           objectFit="contain"

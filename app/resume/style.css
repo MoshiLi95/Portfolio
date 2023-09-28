@@ -22,7 +22,7 @@ aside {
 }
 
 .wrapper {
-  @apply w-full bg-white dark:bg-zinc-800;
+  @apply w-full bg-white dark:bg-black;
 
   position: relative;
   display: flex;
@@ -45,7 +45,7 @@ aside {
 }
 
 .carousel--image {
-  @apply relative  aspect-auto w-full max-w-full shrink-0 md:aspect-video;
+  @apply relative  aspect-auto w-full max-w-full shrink-0 overflow-hidden md:aspect-video;
 }
 
 .carousel--description {
@@ -57,7 +57,7 @@ aside {
 
   /* Track */
   &::-webkit-scrollbar-track {
-    @apply bg-white dark:bg-zinc-800;
+    @apply bg-white dark:bg-black;
     border-radius: 5px;
   }
 

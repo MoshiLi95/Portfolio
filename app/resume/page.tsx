@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ScrollProgress from "./ScrollProgress";
+
 import MenuItem from "./MenuItem";
 import Experience from "./Experience";
 import Projects from "./Projects";
@@ -16,7 +16,6 @@ export const metadata = {
 export default function Resume() {
   return (
     <div className="resume--container">
-      <ScrollProgress />
       <aside className="sticky left-0 flex h-screen flex-col flex-wrap items-center justify-between xl:w-2/12">
         <h1 className="hidden text-3xl font-semibold tracking-widest text-blue-600 dark:text-green-400 xl:block">
           Resume

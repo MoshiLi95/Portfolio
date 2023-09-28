@@ -1,5 +1,6 @@
 footer {
-  -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+  /*-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);*/
+  @apply border-t-[6px] border-black dark:border-white;
 }
 
 iframe {
@@ -9,7 +10,7 @@ iframe {
 
 @media (min-width: 768px) {
   footer {
-    -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+    /*-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);*/
   }
   iframe {
     height: 600px;

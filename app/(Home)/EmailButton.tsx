@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import { clsx } from "clsx";
 import { LuMailbox, LuCheck } from "react-icons/lu";
+import { useTheme } from "next-themes";
 
 export default function EmailButton() {
   const [display, setDisplay] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     if (display) setTimeout(() => setDisplay(false), 5000);
@@ -13,15 +15,18 @@ export default function EmailButton() {
   return (
     <div className="relative flex flex-row flex-wrap gap-5">
       <button
-        className="group flex h-12 border-2 border-blue-600 focus:ring dark:border-green-500"
+        className="group flex h-12 border-2 border-black bg-transparent focus:ring dark:border-white"
         onClick={() => {
           setDisplay(true);
         }}
       >
-        <div className="flex h-full w-12 items-center justify-center bg-blue-600 dark:bg-green-500">
-          <LuMailbox size="24px" color="white" />
+        <div className="flex h-full w-12 items-center justify-center bg-black dark:bg-white">
+          <LuMailbox
+            size="24px"
+            color={resolvedTheme === "dark" ? "black" : "white"}
+          />
         </div>
-        <div className="flex h-full items-center justify-center px-5 text-xl font-semibold text-blue-600 group-hover:bg-blue-600 group-hover:text-white dark:text-green-500 dark:group-hover:dark:bg-green-500">
+        <div className="email--content">
           <span>li.moshi@outlook.com</span>
         </div>
       </button>
@@ -35,7 +40,7 @@ export default function EmailButton() {
         </span>
         Copied to clipboard!
         <span
-          className="ml-2 cursor-pointer text-blue-600 hover:font-semibold dark:text-green-500"
+          className="ml-2 cursor-pointer  underline  underline-offset-4 hover:font-semibold"
           onClick={() => {
             window.location.href = "mailto:li.moshi@outlook.com";
           }}

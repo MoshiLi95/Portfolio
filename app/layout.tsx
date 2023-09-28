@@ -30,8 +30,10 @@ export default function RootLayout({
       <body className={spaceGrotesk.className} suppressHydrationWarning>
         <Providers>
           <Navigation />
-          <div className="main--content">{children}</div>
-          <Footer />
+          <div className="main--content">
+            {children}
+            <Footer />
+          </div>
           <ContactForm />
         </Providers>
       </body>

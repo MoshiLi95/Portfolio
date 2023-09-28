@@ -9,21 +9,11 @@ export default function IconLinks() {
         target="_blank"
         title="LinkedIn"
       >
-        <LinkedInIcon
-          size="text-4xl"
-          svgClassName="group-hover:fill-sky-800 fill-gray-600 dark:fill-green-400"
-        />
+        <LinkedInIcon size="text-4xl" className="h-12 w-12" />
       </Link>
 
-      <Link
-        href={"https://github.com/Moshi-Li"}
-        target="_blank"
-        title="Github"
-      >
-        <GithubIcon
-          size="text-4xl"
-          svgClassName="group-hover:fill-black fill-gray-600 dark:fill-green-400 dark:group-hover:fill-white"
-        />
+      <Link href={"https://github.com/Moshi-Li"} target="_blank" title="Github">
+        <GithubIcon size="text-4xl" className="h-12 w-12" />
       </Link>
     </>
   );

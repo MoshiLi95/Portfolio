@@ -9,7 +9,7 @@ export default function Links() {
   const { animatedRoute } = useAnimatedRouter();
 
   return (
-    <ul className="hidden flex-row gap-x-4 md:flex">
+    <ul className="hidden flex-row items-center gap-x-4 md:flex">
       <li>
         <Link
           href={"/"}
@@ -59,11 +59,14 @@ export default function Links() {
         <span
           className="nav--link cursor-pointer"
           onClick={() => {
-            window.scrollTo({
-              top: document.body.scrollHeight,
-              left: 0,
-              behavior: "smooth",
-            });
+            const container = document.getElementsByClassName("main--content");
+            if (container[0]) {
+              container[0].scrollTo({
+                top: container[0].scrollHeight,
+                left: 0,
+                behavior: "smooth",
+              });
+            }
           }}
         >
           Contact

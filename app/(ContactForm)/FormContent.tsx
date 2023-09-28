@@ -35,7 +35,7 @@ export default function FormContent() {
 
   return (
     <>
-      <h3 className="w-full rounded-t-xl  bg-blue-500 p-4 text-2xl font-semibold text-white dark:bg-green-500">
+      <h3 className="w-full rounded-t-xl p-4 text-2xl font-semibold  dark:bg-green-500">
         Send me a message
       </h3>
       <div className="h-full grow px-5">
@@ -134,7 +134,7 @@ export default function FormContent() {
                   checked={formik.values.receipt}
                   onChange={formik.handleChange}
                 />
-                <div className="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+                <div className="pointer-events-none absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4  opacity-0 transition-opacity peer-checked:opacity-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-3.5 w-3.5"
@@ -168,7 +168,7 @@ export default function FormContent() {
             <button
               type="submit"
               className=" disabled:hover: flex h-12 w-full items-center justify-center bg-blue-600 px-4 py-2 text-xl 
-              font-semibold text-white transition hover:font-medium focus:ring enabled:hover:bg-blue-500 disabled:opacity-50
+              font-semibold  transition hover:font-medium focus:ring enabled:hover:bg-blue-500 disabled:opacity-50
               dark:bg-green-500 enabled:dark:hover:bg-green-400"
               disabled={
                 Object.keys(formik.errors).length > 0 ||
@@ -176,7 +176,7 @@ export default function FormContent() {
               }
             >
               {messageFormState === "loading" ? (
-                <span className="animate-spin text-xl font-semibold text-white ">
+                <span className="animate-spin text-xl font-semibold  ">
                   <LuLoader2 />
                 </span>
               ) : (

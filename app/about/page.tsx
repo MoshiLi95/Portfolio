@@ -9,7 +9,7 @@ export const metadata = {
 export default function About() {
   return (
     <main className="flex min-h-screen justify-center pl-16 pt-20">
-      <aside className="absolute left-0 top-0 h-full w-16 bg-white dark:bg-zinc-800">
+      <aside className="absolute left-0 top-0 h-full w-16 bg-white dark:bg-black">
         <h1 className="aside--header">
           <span>A</span>
           <span>b</span>

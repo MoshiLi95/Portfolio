@@ -1,0 +1,15 @@
+.email--content {
+  @apply relative z-10 flex h-full items-center justify-center bg-transparent px-5 text-xl font-semibold hover:text-white 
+  hover:after:left-0 hover:after:w-full hover:after:bg-black dark:hover:text-black dark:hover:after:bg-white;
+}
+
+.email--content:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}

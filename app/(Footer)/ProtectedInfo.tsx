@@ -72,12 +72,11 @@ export default function ProtectedInfo() {
           )}
 
           {(validationState === "init" || validationState === "fail") && (
-            <button
-              className="mt-2 inline-flex h-12 w-40 items-center justify-center rounded bg-gray-300 px-4 py-2 font-semibold text-gray-800 hover:bg-gray-400"
-              onClick={handleReCaptchaVerify}
-            >
-              <span>Verify</span>
-            </button>
+            <>
+              <button className="btn--secondary mt-2 h-12 w-40">
+                <span>Verify</span>
+              </button>
+            </>
           )}
 
           {validationState === "loading" && (

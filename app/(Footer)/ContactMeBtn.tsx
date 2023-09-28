@@ -8,7 +8,7 @@ export default function ContactMeBtn() {
   return (
     <div>
       <button
-        className="text-bold h-12 rounded-md bg-white px-5 font-semibold text-blue-600 dark:text-green-600"
+        className="text-bold btn--primary h-14 w-52"
         onClick={() => dispatch(openContactForm())}
       >
         Contact Me

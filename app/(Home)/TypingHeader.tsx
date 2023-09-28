@@ -11,16 +11,14 @@ export default function TypingHeader() {
 
   return completedCount === LOOP_COUNT ? (
     <>
-      <span className="text-5xl font-medium text-blue-600 dark:text-green-500 sm:tracking-widest">
-        Moshi Li
-      </span>
+      <span className="text-5xl font-medium  sm:tracking-widest">Moshi Li</span>
     </>
   ) : (
     <>
       <Typed
-        className={`text-5xl font-medium text-blue-600 dark:text-green-500 sm:tracking-widest`}
+        className={`text-5xl font-medium  sm:tracking-widest`}
         strings={[
-          `<span class="${maShanZheng.className} text-blue-900 dark:text-green-300">李 墨 石</span>`,
+          `<span class="${maShanZheng.className}">李 墨 石</span>`,
           "Moshi Li",
         ]}
         typeSpeed={50}

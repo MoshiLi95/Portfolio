@@ -7,12 +7,14 @@ import "./styles.css";
 
 export default function Navigation() {
   return (
-    <nav className="fixed left-0 top-0 z-10 flex w-full flex-row justify-between bg-white px-10 py-5 transition-shadow hover:shadow-md dark:bg-zinc-800 md:px-14">
-      <h1 className="text-2xl font-bold uppercase tracking-wider md:text-xl lg:text-2xl lg:tracking-widest ">
-        Moshi Li
-      </h1>
+    <nav className="fixed left-0 top-0 z-10 flex h-20 w-full flex-row justify-between border-[6px] border-black bg-white  dark:border-white dark:bg-black ">
+      <div className="flex h-full items-center justify-center border-r-8 border-black px-8 dark:border-white">
+        <h1 className="text-2xl font-bold uppercase tracking-[.75em] md:text-xl  lg:text-2xl">
+          Moshi Li
+        </h1>
+      </div>
       <Links></Links>
-      <div className="hidden flex-row gap-5 md:flex">
+      <div className="hidden flex-row items-center gap-5 border-l-[6px] border-black  px-8 dark:border-white md:flex">
         <IconLinks />
         <ThemeSwitch />
       </div>
