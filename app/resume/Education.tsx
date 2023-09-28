@@ -4,11 +4,9 @@ import { LuExternalLink, LuLocateFixed } from "react-icons/lu";
 export default function Education() {
   return (
     <section className="flex min-h-screen flex-col" section-name="education">
-      <h2 className="mb-5 text-4xl font-semibold tracking-wider text-blue-600 dark:text-green-400">
-        Education
-      </h2>
+      <h2 className="mb-5 text-4xl font-semibold tracking-wider ">Education</h2>
 
-      <div className="flex w-full max-w-6xl flex-grow flex-col justify-center px-3 text-base sm:text-lg">
+      <div className="flex w-full max-w-6xl flex-grow flex-col justify-center pr-3 text-base sm:text-lg">
         {/* Northeastern University */}
         <div className="flex flex-row flex-wrap justify-between text-xl">
           <div className="flex flex-col">

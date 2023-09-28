@@ -16,8 +16,8 @@ export const metadata = {
 export default function Resume() {
   return (
     <div className="resume--container">
-      <aside className="sticky left-0 flex h-screen flex-col flex-wrap items-center justify-between xl:w-2/12">
-        <h1 className="hidden text-3xl font-semibold tracking-widest text-blue-600 dark:text-green-400 xl:block">
+      <aside className="sticky left-0 flex h-[calc(100vh-80px)] flex-col flex-wrap items-center justify-between xl:w-2/12">
+        <h1 className="hidden text-3xl font-semibold tracking-widest  xl:block">
           Resume
         </h1>
         <MenuItem />
@@ -28,7 +28,7 @@ export default function Resume() {
             target="_blank"
             className="hidden xl:block"
           >
-            <button className="h-14 w-52 rounded bg-blue-600 px-4 py-2 text-base font-semibold text-white transition hover:bg-blue-500 hover:font-medium focus:ring dark:bg-green-500 dark:hover:bg-green-400">
+            <button className="btn--primary h-14 w-52">
               Preview in Browser
             </button>
           </Link>
@@ -36,7 +36,7 @@ export default function Resume() {
         </div>
       </aside>
 
-      <main className="w-full overflow-y-hidden sm:w-10/12">
+      <main className="w-full overflow-y-hidden border-l-[6px] border-black pl-5 pt-10 dark:border-white sm:w-10/12">
         <Experience />
         <Projects />
         <Education />

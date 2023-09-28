@@ -26,9 +26,7 @@ import VuejsOriginal from "react-devicons/vuejs/original";
 export default function Skills() {
   return (
     <section className="flex min-h-screen flex-col" section-name="skills">
-      <h2 className="mb-5 text-4xl font-semibold tracking-wider text-blue-600 dark:text-green-400">
-        Skills
-      </h2>
+      <h2 className="mb-5 text-4xl font-semibold tracking-wider ">Skills</h2>
 
       <div className="flex flex-grow flex-col justify-center">
         <div>

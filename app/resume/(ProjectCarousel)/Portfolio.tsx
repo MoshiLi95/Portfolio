@@ -8,7 +8,7 @@ import TypescriptOriginal from "react-devicons/typescript/original";
 
 export default function Portfolio() {
   return (
-    <div className="flex h-full w-full flex-col border-2 border-blue-600 p-2 px-3 dark:border-green-400">
+    <div className="flex h-full w-full flex-col border-2  border-black p-2 px-3 dark:border-white ">
       <div className="carousel--image ">
         <Image
           className="transition duration-1000 hover:scale-110"
@@ -19,7 +19,7 @@ export default function Portfolio() {
         ></Image>
       </div>
       <div className="mt-5 flex flex-row flex-wrap items-center justify-between text-xl">
-        <span className="text-2xl font-semibold text-blue-600 dark:text-green-400 md:text-3xl">
+        <span className="text-2xl font-semibold text-black dark:text-white md:text-3xl">
           li-moshi.com
         </span>
         <span className="font-light uppercase">Sep 2023</span>
@@ -45,7 +45,7 @@ export default function Portfolio() {
         </div>
 
         <div className="flex flex-row">
-          <span className="font-bold text-blue-600 dark:text-green-400">
+          <span className="font-bold text-black dark:text-white">
             You are here!
           </span>
         </div>

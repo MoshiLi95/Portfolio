@@ -16,7 +16,7 @@ export default function Experience() {
   return (
     <section className="min-h-screen  sm:pt-12" section-name="experience">
       <div className="w-full max-w-6xl px-3">
-        <h2 className="mb-5 text-4xl font-semibold tracking-wider text-blue-600 dark:text-green-400">
+        <h2 className="mb-5 text-4xl font-semibold tracking-wider ">
           Experience
         </h2>
         {/* Coveo Solutions*/}

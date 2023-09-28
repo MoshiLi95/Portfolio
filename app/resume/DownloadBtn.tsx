@@ -43,7 +43,10 @@ export default function DownloadBtn() {
   }, [executeRecaptcha]);
 
   return (
-    <button className="download--btn" onClick={handleReCaptchaVerify}>
+    <button
+      className="download--btn btn--secondary"
+      onClick={handleReCaptchaVerify}
+    >
       {validationState === "loading" ? (
         <span className="animate-spin font-semibold">
           <LuLoader2 />

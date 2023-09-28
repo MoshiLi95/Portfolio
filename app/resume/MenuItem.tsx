@@ -11,17 +11,19 @@ export default function MenuItem() {
   }, []);
 
   useEffect(() => {
+    const container = document.getElementsByClassName("main--content");
     const scrollListener = () => {
       sections.forEach((section, index) => {
         const { top } = section.getBoundingClientRect();
-        if (window.innerHeight / 2 > top && top > 0) {
+        const containerHeight = container[0].clientHeight;
+        if (top > -containerHeight / 2 && top < containerHeight / 2) {
           setSelectedIndex(index);
         }
       });
     };
 
-    window.addEventListener("scroll", scrollListener);
-    return () => window.removeEventListener("scroll", scrollListener);
+    container[0].addEventListener("scroll", scrollListener);
+    return () => container[0].removeEventListener("scroll", scrollListener);
   }, [sections]);
 
   return (
@@ -36,11 +38,17 @@ export default function MenuItem() {
           >
             <span
               onClick={() => {
-                window.scrollTo({
-                  top:
-                    section.getBoundingClientRect().top + window.scrollY - 74,
-                  behavior: "smooth",
-                });
+                const container =
+                  document.getElementsByClassName("main--content");
+                if (container[0]) {
+                  container[0].scrollTo({
+                    top:
+                      section.getBoundingClientRect().top +
+                      container[0].scrollTop -
+                      80,
+                    behavior: "smooth",
+                  });
+                }
               }}
             >
               {section.getAttribute("section-name")}

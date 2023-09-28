@@ -6,7 +6,7 @@ import TypescriptOriginal from "react-devicons/typescript/original";
 
 export default function MatterJs() {
   return (
-    <div className="flex h-full w-full flex-col border-2 border-blue-600 p-2 px-3 dark:border-green-400">
+    <div className="flex h-full w-full flex-col border-2 border-black p-2 px-3 dark:border-white ">
       <div className="carousel--image ">
         <Image
           className="transition duration-1000 hover:scale-110"
@@ -17,7 +17,7 @@ export default function MatterJs() {
         ></Image>
       </div>
       <div className="mt-5 flex flex-row flex-wrap items-center justify-between text-xl">
-        <span className="text-2xl font-semibold text-blue-600 dark:text-green-400 md:text-3xl">
+        <span className="text-2xl font-semibold text-black dark:text-white md:text-3xl">
           MatterJs Gadget
         </span>
         <span className="font-light uppercase">May 2023</span>
@@ -47,7 +47,7 @@ export default function MatterJs() {
             target="_blank"
             className="ml-2"
           >
-            <button className=" font-base bg-blue-600 px-4 py-2 text-xl text-white transition hover:bg-blue-500 focus:ring dark:bg-green-500 dark:hover:bg-green-400">
+            <button className="font-base btn--secondary px-4 py-2 text-xl">
               View Demo
             </button>
           </Link>

@@ -4,8 +4,7 @@
 }
 
 .resume--container {
-  @apply relative flex min-h-screen pt-20;
-  padding-top: 76px;
+  @apply relative flex min-h-screen dark:bg-black;
 }
 
 aside {
@@ -15,7 +14,7 @@ aside {
 }
 
 .list--item {
-  @apply -rotate-90 cursor-pointer font-semibold uppercase tracking-wider text-blue-600 opacity-50 transition duration-500 dark:text-green-400 xl:rotate-0 xl:hover:scale-110;
+  @apply -rotate-90 cursor-pointer font-semibold uppercase tracking-wider text-black opacity-50 transition duration-500 dark:text-white xl:rotate-0 xl:hover:scale-110;
 }
 .selected {
   @apply scale-110 font-bold opacity-100 sm:scale-125;
@@ -38,6 +37,7 @@ aside {
   position: relative;
   flex-shrink: 0;
 }
+
 @media screen and (max-width: 640px) {
   .box {
     aspect-ratio: 16 / 24;
@@ -81,13 +81,10 @@ aside {
 }
 
 .education-section--icon svg {
-  @apply stroke-blue-600 dark:stroke-green-400;
+  @apply stroke-black dark:stroke-white;
 }
 
 .download--btn {
   @apply mt-5 hidden h-14 w-52 items-center justify-center 
-  rounded border border-blue-500 bg-transparent 
-  px-4 py-2 font-semibold 
-  text-blue-700 hover:border-transparent hover:bg-blue-500 
-  hover:text-white dark:border-green-400 dark:text-green-500 dark:hover:bg-green-500 dark:hover:text-white xl:flex;
+  rounded px-4 py-2 font-semibold  xl:flex;
 }
