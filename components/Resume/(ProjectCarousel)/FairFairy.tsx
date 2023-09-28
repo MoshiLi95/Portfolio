@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LuCode2 } from "react-icons/lu";
-import { IconWrapper } from "../../(Utilities)/Icons";
+import { IconWrapper } from "../../../components/(Utilities)/Icons";
 import ReactOriginal from "react-devicons/react/original";
 import TypescriptOriginal from "react-devicons/typescript/original";
 
@@ -13,7 +13,8 @@ export default function FairFairy() {
           className="transition duration-1000 hover:scale-110"
           src="/asset/NECE.png"
           alt="portfolio"
-          objectFit="contain"
+          style={{ objectFit: "contain" }}
+          sizes="50vw"
           fill
         ></Image>
       </div>

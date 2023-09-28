@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import useAnimatedRouter from "../hooks/useAnimatedRouter";
+import useAnimatedRouter from "../../hooks/useAnimatedRouter";
 import { clsx } from "clsx";
 
 export default function Links() {

@@ -3,11 +3,11 @@ import { Suspense } from "react";
 import { LuMessageSquare, LuX } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { useDetectClickOutside } from "react-detect-click-outside";
-import { useAppSelector, useAppDispatch, RootStateI } from "../(Slices)/Store";
+import { useAppSelector, useAppDispatch, RootStateI } from "../../Store/Store";
 import {
   toggleContactForm,
   closeContactForm,
-} from "../(Slices)/ContactFormSlice";
+} from "../../Store/ContactFormSlice";
 import FormContent from "./FormContent";
 import "./style.css";
 

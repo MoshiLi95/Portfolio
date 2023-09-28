@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IconWrapper } from "../../(Utilities)/Icons";
+import { IconWrapper } from "../../../components/(Utilities)/Icons";
 import NextjsOriginal from "react-devicons/nextjs/original";
 import TailwindcssPlain from "react-devicons/tailwindcss/plain";
 import DockerOriginal from "react-devicons/docker/original";
@@ -14,7 +14,8 @@ export default function Portfolio() {
           className="transition duration-1000 hover:scale-110"
           src="/asset/portfolio.png"
           alt="portfolio"
-          objectFit="contain"
+          style={{ objectFit: "contain" }}
+          sizes="50vw"
           fill
         ></Image>
       </div>

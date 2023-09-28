@@ -1,12 +1,13 @@
 import Link from "next/link";
 
-import MenuItem from "./MenuItem";
-import Experience from "./Experience";
-import Projects from "./Projects";
-import Education from "./Education";
-import Skills from "./Skills";
-import DownloadBtn from "./DownloadBtn";
-
+import {
+  MenuItem,
+  Experience,
+  Projects,
+  Education,
+  Skills,
+  DownloadBtn,
+} from "../../components/Resume";
 import "./style.css";
 
 export const metadata = {

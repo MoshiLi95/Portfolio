@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { ValidationError } from "yup";
-import { contactEmailTemplate } from "../../template/contactEmail";
-import { contactSchema } from "../../validation/contact";
+import { contactEmailTemplate } from "../../../template/contactEmail";
+import { contactSchema } from "../../../validation/contact";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "next-themes";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { Provider } from "react-redux";
-import { store } from "./(Slices)/Store";
+import { store } from "../Store/Store";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (

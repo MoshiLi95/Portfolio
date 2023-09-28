@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import Axios, { AxiosError } from "axios";
 import { LuLoader2 } from "react-icons/lu";
-import { contactSchema } from "../validation/contact";
+import { contactSchema } from "../../validation/contact";
 
 export default function FormContent() {
   const formik = useFormik({

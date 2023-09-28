@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Providers from "./providers";
 import { Space_Grotesk } from "next/font/google";
 
-import Navigation from "./(Navigation)";
-import Footer from "./(Footer)";
-import ContactForm from "./(ContactForm)";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.png" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={spaceGrotesk.className} suppressHydrationWarning>
         <Providers>

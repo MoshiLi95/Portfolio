@@ -1,9 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LinkedInIcon, GithubIcon } from "./(Utilities)/Icons";
-import { EmailButton, TypingHeader } from "./(Home)";
-//import Elephant from "./(Elephant)";
-import ElephantModel from "./(Elephant)";
+import { LinkedInIcon, GithubIcon } from "../components/(Utilities)/Icons";
+import { EmailButton, TypingHeader, Elephant } from "../components/Home/";
 
 import "./style.css";
 
@@ -53,7 +51,7 @@ export default function Home() {
         </div>
 
         <div className="mt-20 aspect-video w-full sm:mt-0 md:w-6/12">
-          <ElephantModel />
+          <Elephant />
         </div>
       </main>
     </>

@@ -1,6 +1,6 @@
 "use client";
-import { useAppDispatch } from "../(Slices)/Store";
-import { openContactForm } from "../(Slices)/ContactFormSlice";
+import { useAppDispatch } from "../../Store/Store";
+import { openContactForm } from "../../Store/ContactFormSlice";
 
 export default function ContactMeBtn() {
   const dispatch = useAppDispatch();

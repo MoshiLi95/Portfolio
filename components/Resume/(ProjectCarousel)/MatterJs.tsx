@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LuCode2 } from "react-icons/lu";
-import { IconWrapper } from "../../(Utilities)/Icons";
+import { IconWrapper } from "../../../components/(Utilities)/Icons";
 import TypescriptOriginal from "react-devicons/typescript/original";
 
 export default function MatterJs() {
@@ -12,7 +12,8 @@ export default function MatterJs() {
           className="transition duration-1000 hover:scale-110"
           src="/asset/matterjs.png"
           alt="matterJS"
-          objectFit="contain"
+          style={{ objectFit: "contain" }}
+          sizes="50vw"
           fill
         ></Image>
       </div>

@@ -1,4 +1,4 @@
-import TypingHeader from "./TypingHeader";
+import { TypingHeader } from "../../components/About";
 import Image from "next/image";
 import "./style.css";
 
