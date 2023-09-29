@@ -2,9 +2,10 @@ import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 import contactFormReducer from "./ContactFormSlice";
+import elephantColorReducer from "./ElephantColorSlice";
 
 export const store = configureStore({
-  reducer: { contactFormReducer },
+  reducer: { contactFormReducer, elephantColorReducer },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
