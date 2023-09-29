@@ -7,6 +7,7 @@ import {
   Education,
   Skills,
   DownloadBtn,
+  PreviewBtn,
 } from "../../components/Resume";
 import "./style.css";
 
@@ -24,15 +25,7 @@ export default function Resume() {
         <MenuItem />
 
         <div className="flex flex-col items-center justify-center">
-          <Link
-            href={"/pdf/Moshi%20Li%20Resume.pdf"}
-            target="_blank"
-            className="hidden xl:block"
-          >
-            <button className="btn--primary h-14 w-52">
-              Preview in Browser
-            </button>
-          </Link>
+          <PreviewBtn />
           <DownloadBtn />
         </div>
       </aside>
