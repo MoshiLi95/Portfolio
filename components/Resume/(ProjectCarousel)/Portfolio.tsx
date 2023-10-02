@@ -15,7 +15,6 @@ export default function Portfolio() {
           src="/asset/portfolio.png"
           alt="portfolio"
           style={{ objectFit: "contain" }}
-          sizes="50vw"
           fill
         ></Image>
       </div>

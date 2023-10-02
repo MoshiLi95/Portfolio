@@ -15,7 +15,6 @@ export default function Spacestagram() {
           src="/asset/spacestagram.png"
           alt="spacestagram"
           style={{ objectFit: "contain" }}
-          sizes="50vw"
           fill
         ></Image>
       </div>

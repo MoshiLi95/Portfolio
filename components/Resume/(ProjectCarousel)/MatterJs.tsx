@@ -13,7 +13,6 @@ export default function MatterJs() {
           src="/asset/matterjs.png"
           alt="matterJS"
           style={{ objectFit: "contain" }}
-          sizes="50vw"
           fill
         ></Image>
       </div>

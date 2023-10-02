@@ -14,7 +14,6 @@ export default function FairFairy() {
           src="/asset/NECE.png"
           alt="portfolio"
           style={{ objectFit: "contain" }}
-          sizes="50vw"
           fill
         ></Image>
       </div>
