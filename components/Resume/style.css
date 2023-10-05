@@ -84,3 +84,8 @@ aside {
   @apply mt-5 hidden h-14 w-52 items-center justify-center 
   rounded px-4 py-2 font-semibold  xl:flex;
 }
+
+.preview--btn {
+  @apply mt-5 hidden h-14 w-52 items-center justify-center 
+  rounded px-4 py-2 font-semibold  xl:flex;
+}

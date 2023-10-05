@@ -33,9 +33,7 @@ export default function Resume() {
 
       <main className="w-full overflow-y-hidden border-l-[6px] border-black pl-5 pt-10 dark:border-white sm:w-10/12">
         <Experience />
-        <FadeInSection>
-          <Projects />
-        </FadeInSection>
+        <Projects />
 
         <FadeInSection>
           <Education />

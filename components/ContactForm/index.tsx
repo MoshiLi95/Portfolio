@@ -46,18 +46,22 @@ export default function ContactForm() {
   );
   const dispatch = useAppDispatch();
   const ref = useDetectClickOutside({
-    onTriggered: () => dispatch(closeContactForm()),
+    onTriggered: () => {
+      dispatch(closeContactForm());
+    },
   });
+
+  console.log(open);
 
   return (
     <Suspense fallback={null}>
-      <div className="contact--form--container">
+      <div className="contact--form--container" ref={ref}>
         {/* Icon*/}
         <>
           {!open && (
             <span
               className="contact--icon animate-bounce"
-              onClick={() => {
+              onClick={(e) => {
                 dispatch(toggleContactForm());
               }}
             >
@@ -76,7 +80,6 @@ export default function ContactForm() {
           )}
         </>
         <motion.div
-          ref={ref}
           className="contact--form"
           variants={contactForm}
           initial={false}

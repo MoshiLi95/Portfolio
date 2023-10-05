@@ -36,7 +36,10 @@ export default function PreviewBtn() {
   }, [executeRecaptcha]);
 
   return (
-    <button className="btn--primary h-14 w-52" onClick={handleReCaptchaVerify}>
+    <button
+      className="preview--btn  btn--primary"
+      onClick={handleReCaptchaVerify}
+    >
       {validationState === "loading" ? (
         <span className="flex animate-spin items-center justify-center font-semibold">
           <LuLoader2 />
