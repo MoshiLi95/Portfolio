@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { LinkedInIcon, GithubIcon } from "../components/(Utilities)/Icons";
+import { LinkedInIcon, GithubIcon } from "../components/Utilities/Icons";
 import { EmailButton, TypingHeader, Elephant } from "../components/Home/";
 
 import "./style.css";

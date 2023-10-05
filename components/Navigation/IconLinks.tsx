@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LinkedInIcon, GithubIcon } from "../(Utilities)/Icons";
+import { LinkedInIcon, GithubIcon } from "../Utilities/Icons";
 
 export default function IconLinks() {
   return (

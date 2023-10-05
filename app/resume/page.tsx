@@ -9,6 +9,7 @@ import {
   DownloadBtn,
   PreviewBtn,
 } from "../../components/Resume";
+import FadeInSection from "@/components/Utilities/FadeInSection";
 import "./style.css";
 
 export const metadata = {
@@ -32,9 +33,16 @@ export default function Resume() {
 
       <main className="w-full overflow-y-hidden border-l-[6px] border-black pl-5 pt-10 dark:border-white sm:w-10/12">
         <Experience />
-        <Projects />
-        <Education />
-        <Skills />
+        <FadeInSection>
+          <Projects />
+        </FadeInSection>
+
+        <FadeInSection>
+          <Education />
+        </FadeInSection>
+        <FadeInSection>
+          <Skills />
+        </FadeInSection>
       </main>
     </div>
   );

@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { clsx } from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ThemeSwitch from "../(Utilities)/ThemeSwitch";
-import { GithubIcon, LinkedInIcon } from "../(Utilities)/Icons";
+import ThemeSwitch from "../Utilities/ThemeSwitch";
+import { GithubIcon, LinkedInIcon } from "../Utilities/Icons";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);

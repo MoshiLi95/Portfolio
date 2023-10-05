@@ -23,14 +23,21 @@ type GLTFResult = GLTF & {
 
 function ElephantMesh() {
   const ref = useRef<THREE.Mesh>(null!);
+
   const { nodes } = useGLTF("/models/elephant.glb") as GLTFResult;
+  const body = nodes.elephant.children[1] as THREE.Mesh & {
+    material: THREE.Material & { color: THREE.Color };
+  };
+
   const { color } = useAppSelector(
     (store: RootStateI) => store.elephantColorReducer,
   );
   const dispatch = useAppDispatch();
-  const body = nodes.elephant.children[1] as THREE.Mesh & {
-    material: THREE.Material & { color: THREE.Color };
-  };
+  const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? "pointer" : "auto";
+  }, [hovered]);
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
@@ -52,6 +59,11 @@ function ElephantMesh() {
       position={[0, 0, 0]}
       onPointerEnter={(e) => {
         dispatch(openColorPicker());
+      }}
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+      onClick={() => {
+        window.open(`https://moshi-li.github.io/roaming-elephant/`, "_blank");
       }}
     >
       <primitive

@@ -1,7 +1,4 @@
-import {
-  IconWrapper,
-  WebComponentIcon,
-} from "../../components/(Utilities)/Icons";
+import { IconWrapper, WebComponentIcon } from "../Utilities/Icons";
 import Html5PlainWordmark from "react-devicons/html5/plain-wordmark";
 import Css3PlainWordmark from "react-devicons/css3/plain-wordmark";
 import ReactOriginal from "react-devicons/react/original";

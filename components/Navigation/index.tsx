@@ -1,7 +1,7 @@
 import Links from "./Links";
 import IconLinks from "./IconLinks";
 import Sidebar from "./Sidebar";
-import ThemeSwitch from "../(Utilities)/ThemeSwitch";
+import ThemeSwitch from "../Utilities/ThemeSwitch";
 
 import "./styles.css";
 

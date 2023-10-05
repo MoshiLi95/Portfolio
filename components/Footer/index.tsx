@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GithubIcon, LinkedInIcon } from "../(Utilities)/Icons";
+import { GithubIcon, LinkedInIcon } from "../Utilities/Icons";
 import ContactMeBtn from "./ContactMeBtn";
 import ProtectedInfo from "./ProtectedInfo";
 

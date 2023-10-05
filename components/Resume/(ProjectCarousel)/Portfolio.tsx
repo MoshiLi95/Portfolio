@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IconWrapper } from "../../../components/(Utilities)/Icons";
+import { IconWrapper } from "../../Utilities/Icons";
 import NextjsOriginal from "react-devicons/nextjs/original";
 import TailwindcssPlain from "react-devicons/tailwindcss/plain";
 import DockerOriginal from "react-devicons/docker/original";

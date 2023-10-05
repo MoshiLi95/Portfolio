@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LuCode2 } from "react-icons/lu";
-import { IconWrapper } from "../../../components/(Utilities)/Icons";
+import { IconWrapper } from "../../Utilities/Icons";
 import TypescriptOriginal from "react-devicons/typescript/original";
 
 export default function MatterJs() {
