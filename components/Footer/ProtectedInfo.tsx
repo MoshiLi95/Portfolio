@@ -73,18 +73,18 @@ export default function ProtectedInfo() {
 
           {(validationState === "init" || validationState === "fail") && (
             <>
-              <button className="btn--secondary mt-2 h-12 w-40">
+              <button
+                className="btn--secondary mt-2 h-12 w-40"
+                onClick={handleReCaptchaVerify}
+              >
                 <span>Verify</span>
               </button>
             </>
           )}
 
           {validationState === "loading" && (
-            <button
-              className="mt-2 inline-flex h-12 w-40 items-center justify-center rounded bg-gray-300 px-4 py-2 font-semibold text-gray-800 "
-              disabled
-            >
-              <span className="animate-spin font-semibold">
+            <button className="btn--secondary mt-2 h-12 w-40" disabled>
+              <span className="flex animate-spin  justify-center font-semibold">
                 <LuLoader2 />
               </span>
             </button>
