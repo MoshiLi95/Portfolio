@@ -38,17 +38,18 @@ export default function About() {
             </div>
           </div>
           <p className="text-xl">
-            {`Hi there, my name is Moshi and I like to build all kinds of things. 
-            I specialize in front end development and have completed many back end 
-            tasks as well when needed.`}
+            {`Hi there, I'm Moshi, and I'm enthusiastic about crafting a wide array of creations. 
+            My primary focus lies in front-end development, although I'm no stranger to tackling 
+            back-end tasks when the situation calls for it.`}
             <br /> <br />
-            {`My passion as a front end developer is to bring ideas to reality with 
-            excellent usability, creative aesthetics and a lot of polish – all in 
-            the name of offering fluid and pleasing experiences for users.`}
+            {`As a software developer, my true passion lies in transforming concepts into reality, 
+            all while prioritizing exceptional user-friendliness, innovative aesthetics, and a generous 
+            dose of finesse. My goal is to provide users with seamless and delightful experiences.`}
             <br /> <br />
-            {`Software Development is a rapidly growing field and it is challenging to keep up sometimes. 
-            However, with my skills and passion, I am up to the task and excited to see where this life-long 
-            learning journey will take me.`}
+            {`The world of software development is in constant flux, evolving rapidly, and it can be 
+            quite the challenge to stay abreast of the latest trends. Nevertheless, armed with my skills 
+            and unwavering enthusiasm, I'm prepared to take on this lifelong journey of learning, excited 
+            to discover where it will lead me.`}
           </p>
         </div>
       </div>
