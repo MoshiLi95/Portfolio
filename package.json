@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",
-    "axios": "^1.5.0",
+    "axios": "^1.6.0",
     "clsx": "^2.0.0",
     "formik": "^2.4.5",
     "framer-motion": "^10.16.4",
